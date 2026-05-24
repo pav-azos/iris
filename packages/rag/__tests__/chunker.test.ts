@@ -36,3 +36,48 @@ describe('chunkTextWindow', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
+
+import { chunkQAPairs } from '../chunker';
+
+describe('chunkQAPairs', () => {
+  const sampleFAQ = `**1. Qual é o prazo para o corretor entregar documentos?**
+**Resposta:** O prazo máximo é de até 5 dias úteis.
+*(Referência: L15040)*
+
+**2. O que acontece se o corretor descumprir o prazo?**
+**Resposta:** Gera presunção de responsabilidade por perdas e danos.
+*(Referência: FAQ da Lei)*
+
+**3. Pergunta simples?**
+**Resposta:** Resposta simples aqui.`;
+
+  it('splits into one chunk per Q&A pair', () => {
+    const chunks = chunkQAPairs(sampleFAQ, 'FAQ.txt', 'official');
+    expect(chunks).toHaveLength(3);
+  });
+
+  it('each chunk contains both question and answer', () => {
+    const chunks = chunkQAPairs(sampleFAQ, 'FAQ.txt', 'official');
+    expect(chunks[0].text).toContain('Qual é o prazo');
+    expect(chunks[0].text).toContain('5 dias úteis');
+  });
+
+  it('assigns correct metadata', () => {
+    const chunks = chunkQAPairs(sampleFAQ, 'FAQ.txt', 'official');
+    chunks.forEach(c => {
+      expect(c.metadata.source).toBe('FAQ.txt');
+      expect(c.metadata.authority).toBe('official');
+      expect(c.metadata.page).toBe(0);
+    });
+  });
+
+  it('handles empty string gracefully', () => {
+    expect(chunkQAPairs('', 'FAQ.txt', 'official')).toHaveLength(0);
+  });
+
+  it('assigns unique ids', () => {
+    const chunks = chunkQAPairs(sampleFAQ, 'FAQ.txt', 'official');
+    const ids = chunks.map(c => c.id);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+});

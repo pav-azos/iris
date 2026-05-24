@@ -40,3 +40,20 @@ export function chunkTextWindow(
 
   return chunks;
 }
+
+// Splits on numbered bold questions: **N. text**
+const QA_SPLIT_PATTERN = /(?=\*\*\d+\.)/g;
+
+export function chunkQAPairs(
+  text: string,
+  source: string,
+  authority: Authority
+): RawChunk[] {
+  if (!text.trim()) return [];
+  const pairs = text.split(QA_SPLIT_PATTERN).filter(s => s.trim());
+  return pairs.map(pair => ({
+    id: randomUUID(),
+    text: pair.trim(),
+    metadata: { source, page: 0, authority },
+  }));
+}
