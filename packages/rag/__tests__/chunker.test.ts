@@ -86,7 +86,7 @@ import { chunkFile } from '../chunker';
 import { join } from 'path';
 
 describe('chunkFile', () => {
-  const faqPath = join(process.cwd(), '../../docs/data/FAQ.txt');
+  const faqPath = join(import.meta.dir, '../../../docs/data/FAQ.txt');
 
   it('chunks a TXT Q&A file into Q&A pairs', async () => {
     const chunks = await chunkFile({ filePath: faqPath, authority: 'official' });
