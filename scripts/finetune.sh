@@ -58,23 +58,17 @@ echo "Dry run:      $DRY_RUN"
 echo ""
 
 # ---------------------------------------------------------------------------
-# Passo 1: Gera dataset JSONL
+# Passo 1: Verifica dataset JSONL (não regenera — use bun run generate-dataset
+#           ou bun run augment-dataset antes)
 # ---------------------------------------------------------------------------
-echo "▶ Passo 1/5 — Gerando dataset..."
+echo "▶ Passo 1/5 — Verificando dataset..."
 
-if [ "$DRY_RUN" = true ]; then
-  echo "  [dry-run] bun run generate-dataset"
-else
-  cd "$ROOT"
-  bun run generate-dataset
-fi
-
-# Verifica arquivos gerados
 TRAIN_FILE="$DATA_DIR/train.jsonl"
 VALID_FILE="$DATA_DIR/valid.jsonl"
 
 if [ ! -f "$TRAIN_FILE" ]; then
-  echo "✗ $TRAIN_FILE não encontrado. Execute: bun run generate-dataset"
+  echo "✗ $TRAIN_FILE não encontrado."
+  echo "  Execute primeiro: bun run generate-dataset && bun run augment-dataset"
   exit 1
 fi
 
@@ -97,12 +91,12 @@ if [ "$DRY_RUN" = true ]; then
   echo "    --batch-size $BATCH_SIZE --learning-rate $LEARNING_RATE \\"
   echo "    --adapter-path $ADAPTERS_DIR"
 else
-  $PYTHON -m mlx_lm.lora \
+  $PYTHON -m mlx_lm lora \
     --model "$BASE_MODEL" \
     --train \
     --data "$DATA_DIR" \
     --iters "$ITERS" \
-    --lora-layers "$LORA_LAYERS" \
+    --num-layers "$LORA_LAYERS" \
     --batch-size "$BATCH_SIZE" \
     --learning-rate "$LEARNING_RATE" \
     --adapter-path "$ADAPTERS_DIR" \
@@ -124,7 +118,7 @@ mkdir -p "$FUSED_DIR"
 if [ "$DRY_RUN" = true ]; then
   echo "  [dry-run] mlx_lm.fuse --model $BASE_MODEL --adapter-path $ADAPTERS_DIR --save-path $FUSED_DIR"
 else
-  $PYTHON -m mlx_lm.fuse \
+  $PYTHON -m mlx_lm fuse \
     --model "$BASE_MODEL" \
     --adapter-path "$ADAPTERS_DIR" \
     --save-path "$FUSED_DIR"
