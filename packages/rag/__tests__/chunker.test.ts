@@ -81,3 +81,25 @@ describe('chunkQAPairs', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
+
+import { chunkFile } from '../chunker';
+import { join } from 'path';
+
+describe('chunkFile', () => {
+  const faqPath = join(process.cwd(), '../../docs/data/FAQ.txt');
+
+  it('chunks a TXT Q&A file into Q&A pairs', async () => {
+    const chunks = await chunkFile({ filePath: faqPath, authority: 'official' });
+    expect(chunks.length).toBeGreaterThan(0);
+    chunks.forEach(c => {
+      expect(c.text.length).toBeGreaterThan(0);
+      expect(c.metadata.authority).toBe('official');
+      expect(c.id).toBeTruthy();
+    });
+  });
+
+  it('FAQ.txt produces more than 10 Q&A chunks', async () => {
+    const chunks = await chunkFile({ filePath: faqPath, authority: 'official' });
+    expect(chunks.length).toBeGreaterThan(10);
+  });
+});
