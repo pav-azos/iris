@@ -1,3 +1,12 @@
 node_modules
 apps/web/data/corpus.json
 apps/web/data/.index-cache.json
+
+# Build artifacts
+.next/
+apps/web/.next/
+.turbo/
+apps/web/tsconfig.tsbuildinfo
+
+# Docs data
+docs/data/

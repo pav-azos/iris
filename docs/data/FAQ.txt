@@ -1,0 +1,485 @@
+1o Prompt usado e resposta recebida:
+
+"Com base nos documentos carregados. Atue como um professor e crie flash cards com 50 perguntas com níveis variados de complexidade para formar um corretor de seguros especialista na nova lei. Monte as respostas com referencia aos materiais disponibilizados.
+
+O questionario com suas respostas devem ser apresentados em formato de arquivo MD."
+
+resposta recebida:
+
+# Flashcards: Especialista na Nova Lei de Seguros (Lei nº 15.040/2024)
+
+Este material foi elaborado para treinar corretores de seguros, contendo 50 perguntas e respostas (flashcards) com diferentes níveis de complexidade (Básico, Intermediário e Avançado) sobre o novo Marco Legal dos Seguros do Brasil.
+
+---
+
+## Nível Básico: Contexto Geral e Vigência
+
+**1. Quando a nova Lei de Seguros (Lei nº 15.040/2024) entra em vigor?**
+**Resposta:** A lei entra em vigor no dia 11 de dezembro de 2025, um ano após sua publicação oficial.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**2. A nova lei substitui o Código Civil nas regras sobre seguros?**
+**Resposta:** Sim. O capítulo do Código Civil que trata do contrato de seguro (arts. 757 a 802) e outras normas dispersas foram revogados.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**3. O Código de Defesa do Consumidor (CDC) deixa de ser aplicável aos seguros?**
+**Resposta:** Não, o CDC continua plenamente aplicável aos contratos de seguro, atuando em conjunto com a nova lei.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**4. A Lei 15.040/2024 afeta os seguros de saúde suplementar (planos de saúde)?**
+**Resposta:** Não. A lei de saúde suplementar (Lei 9.656/1998) não sofreu alterações. A nova lei aplica-se aos produtos securitários fiscalizados pela SUSEP.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**5. A nova legislação se aplica a contratos antigos?**
+**Resposta:** Ela se aplica a todos os contratos vigentes a partir de 11 de dezembro de 2025. O que ocorreu antes continuará sob a regra antiga, mas renovações e fatos ocorridos sob a nova vigência seguem o novo marco.
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
+
+**6. O que é o "interesse legítimo" no contrato de seguro segundo a nova lei?**
+**Resposta:** É o vínculo de valor e importância que o segurado mantém em relação ao bem ou pessoa, baseando a contratação no interesse real em proteger aquele risco, não como um jogo ou aposta.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+---
+
+## Nível Intermediário: O Papel e os Deveres do Corretor
+
+**7. Qual é o novo prazo legal para o corretor entregar documentos e dados confiados a ele?**
+**Resposta:** O prazo máximo é de até 5 dias úteis. Em casos de iminente perecimento de direito, o aviso deve ser imediato.
+*(Referência: L15040 - Nova lei de seguros / FAQ da Lei)*
+
+**8. O que acontece se o corretor descumprir o prazo de 5 dias úteis?**
+**Resposta:** O descumprimento gera presunção de responsabilidade por perdas e danos, o que significa que o corretor será considerado negligente e pode ser responsabilizado judicialmente.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**9. É recomendado que o corretor utilize o seu e-mail ou endereço no cadastro do segurado?**
+**Resposta:** Não. A nova lei prevê que, se o segurado não for encontrado no último endereço informado, ele será considerado notificado. Usar os dados da corretora pode gerar corresponsabilidade judicial em caso de falha de comunicação (ex.: cancelamento por inadimplência).
+*(Referência: FAQ da Lei nº 15.040/2024 / Adequação à Lei n 15.040 - PWC)*
+
+**10. O corretor pode preencher o questionário de avaliação de risco pelo cliente?**
+**Resposta:** Pode auxiliar, mas nunca presumir ou inventar dados. O ideal é que o próprio segurado preencha ou confirme expressamente tudo, para evitar omissões que acarretem a perda da indenização.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**11. Quais meios são aceitos pela lei para notificar o segurado?**
+**Resposta:** Qualquer meio idôneo que comprove o recebimento, como SMS, WhatsApp, e-mail e carta registrada.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**12. A responsabilidade do corretor aumentou com a nova lei?**
+**Resposta:** A responsabilidade sempre existiu, mas a nova lei a tornou mais evidente e reforçada, exigindo um padrão de excelência maior em documentar tudo e garantir a transparência na venda.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**13. Outro corretor pode intermediar a renovação do seguro de um cliente?**
+**Resposta:** Sim, o cliente (ou estipulante) tem livre escolha de trocar de corretor nas renovações que não forem automáticas ou que alterarem as condições a seu favor.
+*(Referência: L15040 - Nova lei de seguros)*
+
+---
+
+## Nível Básico: Aceitação de Propostas e Prazos
+
+**14. Qual a diferença, na lei, entre Cotação e Proposta?**
+**Resposta:** Cotação é apenas a solicitação de informações (preço/condições) e não obriga a contratação. A Proposta é o documento que formaliza o interesse em contratar ou ofertar o seguro.
+*(Referência: FAQ da Lei / 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**15. Qual é o novo prazo máximo para a seguradora aceitar ou recusar uma proposta?**
+**Resposta:** O prazo máximo passou de 15 para 25 dias.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS / Conheça Nova Lei de Seguros - MDS)*
+
+**16. O que acontece se a seguradora não se manifestar em 25 dias sobre a proposta?**
+**Resposta:** O silêncio da seguradora ao fim dos 25 dias implica aceitação automática da proposta.
+*(Referência: Conheça Nova Lei de Seguros - MDS / L15040)*
+
+**17. Quantas vezes a seguradora pode solicitar documentos adicionais na fase de proposta?**
+**Resposta:** Apenas uma única vez, de forma justificada, reiniciando-se a contagem do prazo.
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+**18. As seguradoras podem exigir documentos que já tenham ou que sejam públicos?**
+**Resposta:** Não. A lei veda expressamente a exigência de documentos que a seguradora já possua ou que sejam de fácil acesso por terceiros (órgãos públicos, por exemplo).
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+---
+
+## Nível Intermediário: Transparência e Cláusulas Contratuais
+
+**19. O que acontece em caso de dúvidas ou ambiguidades nas cláusulas do seguro?**
+**Resposta:** Qualquer ambiguidade ou contradição no contrato será sempre interpretada da forma mais favorável ao segurado, beneficiário ou terceiro prejudicado.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS / Conheça Nova Lei de Seguros - MDS)*
+
+**20. Como as cláusulas de exclusão e perdas de direito devem ser apresentadas?**
+**Resposta:** Devem estar descritas de forma clara, inequívoca e em total destaque no contrato. Se não estiverem, podem ser consideradas nulas.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**21. Toda apólice precisa de um "dicionário"?**
+**Resposta:** Sim. A nova lei obriga que toda apólice contenha um glossário explicando os termos técnicos de forma simples e acessível.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**22. Se houver divergência entre a Nota Técnica Atuarial e a apólice, o que prevalece?**
+**Resposta:** Prevalece o texto que for mais favorável ao segurado.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**23. O que a lei determina sobre questionários de saúde e doenças preexistentes?**
+**Resposta:** A exclusão por doença preexistente só é permitida se não houver período de carência e desde que fique comprovado que o segurado omitiu voluntariamente a condição após ser expressamente questionado.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+---
+
+## Nível Avançado: Inadimplência, Cancelamento e Prêmio
+
+**24. O que acontece se o cliente atrasar a primeira parcela (ou o prêmio à vista)?**
+**Resposta:** A lei prevê a resolução (rescisão) imediata do contrato de pleno direito, salvo disposição contrária no contrato.
+*(Referência: L15040 / FAQ da Lei nº 15.040/2024)*
+
+**25. E se o segurado atrasar da segunda parcela em diante? A apólice é cancelada imediatamente?**
+**Resposta:** Não. A garantia será suspensa e o segurado deverá ser notificado com um prazo mínimo de 15 dias para purgar a mora. O cancelamento (resolução) só pode ocorrer, no mínimo, 30 dias após essa notificação.
+*(Referência: L15040 / FAQ da Lei nº 15.040/2024)*
+
+**26. As seguradoras podem cancelar apólices de forma unilateral sem motivo?**
+**Resposta:** Não, o cancelamento unilateral imotivado passa a ser proibido. A recusa em renovar deve ser justificada com 30 dias de antecedência.
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+**27. Se o contrato for cancelado por inadimplência, o cliente perde o direito ao resgate (VGBL, etc)?**
+**Resposta:** Não. Nos seguros com formação de reserva (VGBL, Previdência), o direito ao resgate do saldo disponível é garantido mesmo se o contrato for cancelado.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**28. Como fica a inadimplência nos Seguros Coletivos?**
+**Resposta:** A rescisão por inadimplência num seguro coletivo de pessoas só ocorrerá após 90 dias contados da última notificação ao estipulante.
+*(Referência: L15040 - Nova lei de seguros)*
+
+---
+
+## Nível Intermediário: Agravamento de Risco
+
+**29. O que o segurado deve fazer se o risco do seu bem/pessoa aumentar (Agravamento de Risco)?**
+**Resposta:** Ele deve comunicar a seguradora assim que tomar conhecimento.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**30. Após ser comunicada do agravamento do risco, qual o prazo da seguradora para agir?**
+**Resposta:** A seguradora tem 20 dias para notificar a cobrança da diferença de prêmio ou rescindir o contrato se o novo risco for tecnicamente inaceitável.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**31. E se a seguradora quiser aumentar o prêmio em mais de 10% devido a esse agravamento?**
+**Resposta:** Se o aumento for superior a 10%, o segurado tem o direito de recusar e pedir a rescisão do contrato no prazo de 15 dias, recebendo o prêmio proporcional de volta.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**32. A seguradora pode negar um sinistro apenas alegando agravamento de risco?**
+**Resposta:** Não. Para negar a indenização, a seguradora é obrigada a provar o nexo causal direto entre o agravamento não comunicado e o sinistro ocorrido.
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
+
+---
+
+## Nível Avançado: Regulação, Prazos e Sinistros
+
+**33. Qual é o prazo para a seguradora manifestar-se (aceitar ou negar) sobre a cobertura de um sinistro?**
+**Resposta:** A seguradora tem até 30 dias após o envio de todos os documentos para se manifestar. O silêncio acarreta perda do direito de recusar o pagamento.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**34. A Susep pode estender esse prazo de 30 dias para análise de sinistro?**
+**Resposta:** Sim, para apuração de sinistros muito complexos, a Susep pode fixar prazos maiores, com um teto limite máximo de 120 dias.
+*(Referência: L15040 / Conheça Nova Lei de Seguros - MDS)*
+
+**35. O que acontece se a seguradora pedir documentos complementares no sinistro?**
+**Resposta:** O prazo fica suspenso. Porém, a lei limita essa suspensão a, no máximo, duas vezes.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**36. Uma vez reconhecida a cobertura do sinistro, qual o prazo para o pagamento da indenização?**
+**Resposta:** A seguradora tem 30 dias contados do reconhecimento para depositar a indenização.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**37. O que incide em caso de atraso (mora) no pagamento da indenização pela seguradora?**
+**Resposta:** Incidirá correção monetária, juros legais e uma multa de 2% sobre o montante devido, além do direito do segurado cobrar perdas e danos.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**38. De quem é a obrigação de pagar as despesas com a regulação e laudos do sinistro?**
+**Resposta:** Correm integralmente por conta da seguradora (salvo os documentos do dia a dia ou de identificação do segurado).
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**39. É obrigatório o adiantamento de indenização?**
+**Resposta:** Sim, a lei determina que valores incontroversos e recursos já adiantados à seguradora devem ser usados imediatamente para o adiantamento da indenização ao segurado/terceiro.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**40. A seguradora pode alterar o motivo da recusa de um sinistro durante um processo judicial?**
+**Resposta:** Não. A recusa deve ser expressa, motivada e formal, não podendo inovar fundamentos posteriormente, exceto se surgirem fatos novos anteriormente desconhecidos.
+*(Referência: L15040 - Nova lei de seguros)*
+
+---
+
+## Nível Avançado: Regras Específicas e Prescrição
+
+**41. Há carência na renovação de Seguros de Vida?**
+**Resposta:** Não é permitida a imposição de nova carência para mortes e invalidez em caso de renovação ou substituição de apólice (mesmo trocando de seguradora).
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**42. O suicídio tem carência na nova lei?**
+**Resposta:** Sim, a lei prevê que não há cobertura se o suicídio ocorrer nos primeiros dois anos de vigência do contrato.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**43. O que acontece com o dinheiro do seguro de vida se o beneficiário não for localizado?**
+**Resposta:** Se a seguradora for informada do sinistro e não localizar os beneficiários no prazo de 3 anos, o valor da indenização será destinado ao Fundo Nacional para Calamidades Públicas (Funcap).
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**44. A seguradora pode excluir cobertura de morte porque o segurado estava praticando esportes radicais ou serviço militar?**
+**Resposta:** Não. A morte ou incapacidade gerada pela prestação de serviço militar, atos humanitários ou prática esportiva deve ser indenizada, sendo nula cláusula em contrário.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**45. Em relação à prescrição, qual o prazo para o segurado processar a seguradora exigindo pagamento?**
+**Resposta:** O prazo é de 1 ano, contado a partir do dia em que o segurado tiver ciência da recusa expressa e motivada da seguradora.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**46. E qual o prazo de prescrição para um terceiro ou beneficiário acionar a seguradora?**
+**Resposta:** O prazo para terceiros e beneficiários é de 3 anos a contar do fato gerador.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**47. O que significa "conhecimento prévio da realização do risco"?**
+**Resposta:** É a venda do seguro sabendo que o sinistro já ocorreu (ex: vender seguro para casa já queimada). É proibido e acarreta nulidade da apólice, com o corretor/seguradora respondendo pelos danos.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**48. Quem responde processualmente em nome do segurado em Seguros Coletivos?**
+**Resposta:** O estipulante do seguro tem poderes para substituir o segurado em processos e arbitragens contra a seguradora.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**49. Onde o segurado deve dar entrada na ação judicial contra a seguradora (Foro Competente)?**
+**Resposta:** A nova lei fixou que o foro competente é o domicílio do segurado ou beneficiário (garantindo sua facilidade processual), salvo se ele mesmo escolher o da seguradora.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**50. Pode haver arbitragem nos contratos de seguro segundo o novo Marco Legal?**
+**Resposta:** Sim, desde que pactuado em documento apartado com a assinatura das partes, devendo seguir as regras do direito brasileiro e acontecer no Brasil.
+*(Referência: L15040 / FAQ da Lei nº 15.040/2024)*
+
+2o Prompt usado e resposta recebida:
+
+"Crie uma nova lista de 50 questões e respostas com suas referencias.
+Mas, seja um segurado (cliente de uma seguradora), o qual está abrindo a ocorrencia de um sinistro.
+
+Novamente, o material deve ser gerado em um arquivo MD"
+
+resposta recebida:
+
+# Guia Prático do Segurado: Dúvidas e Direitos na Hora do Sinistro
+*(Baseado na Lei nº 15.040/2024 - Novo Marco Legal dos Seguros)*
+
+**Apresentação:** Este material foi elaborado para mim, o cliente (segurado), que acabou de sofrer um sinistro (um acidente, incêndio, roubo ou perda de um ente querido) e precisa entender como acionar o seguro, quais são os meus direitos e os deveres da seguradora segundo a nova lei.
+
+---
+
+### Fase 1: Ocorrência e Primeiros Passos
+
+**1. Acabou de acontecer um acidente comigo. Em quanto tempo preciso avisar a seguradora?**
+**Resposta:** Você deve comunicar o sinistro à seguradora "imediatamente" ou assim que for possível, para que ela possa avaliar a situação e iniciar a regulação. 
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**2. Como posso provar que fiz esse aviso de sinistro?**
+**Resposta:** A comunicação pode ser feita por qualquer meio idôneo que comprove o envio e recebimento, como e-mail, aplicativo da seguradora, WhatsApp com protocolo ou carta com aviso de recebimento.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**3. Posso pedir para o meu corretor fazer esse aviso por mim?**
+**Resposta:** Sim! O corretor pode representá-lo. Porém, ele tem o prazo máximo de 5 dias úteis para repassar qualquer documento seu para a seguradora. Se a situação for de risco imediato, ele deve fazer isso na hora.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**4. O que acontece se eu demorar muito para avisar a seguradora e isso piorar o estrago?**
+**Resposta:** Se a sua demora injustificada em avisar prejudicar a avaliação da seguradora ou aumentar o prejuízo, você pode perder o direito à indenização, pois é seu dever agir com boa-fé.
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+**5. Posso começar a consertar as coisas antes da seguradora avaliar?**
+**Resposta:** Não. É seu dever preservar o local e os bens sinistrados até a vistoria da seguradora, exceto se a alteração for necessária para salvar vidas ou evitar que o prejuízo aumente.
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+**6. Tive gastos tentando apagar o fogo ou guinchando meu carro do meio de uma enchente. A seguradora me reembolsa?**
+**Resposta:** Sim. As despesas justificadas de "contenção e salvamento" (tentativas de diminuir o prejuízo) correm por conta da seguradora.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**7. Tem algum limite financeiro para esse reembolso de salvamento que eu gastei?**
+**Resposta:** O reembolso não pode ultrapassar o limite máximo de garantia estabelecido na sua apólice para essas despesas, por isso é bom verificar as condições do seu contrato.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**8. O que é "regulação de sinistro"?**
+**Resposta:** É o processo em que a seguradora vai analisar os fatos, verificar se o que aconteceu está coberto pela apólice e calcular o valor que me será pago. A nova lei diz que isso é competência exclusiva da seguradora.
+*(Referência: Divergências entre a Lei 15.040/24 - ENS)*
+
+**9. A seguradora quer mandar um perito investigar meu sinistro. Quem paga a conta dele?**
+**Resposta:** Todas as despesas com a regulação de sinistro, como peritos, sindicâncias e laudos pedidos pela seguradora, correm integralmente por conta da seguradora.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**10. Se eu quiser contratar um perito particular para contestar a seguradora, posso?**
+**Resposta:** Sim. O segurado tem o direito de acompanhar a regulação de sinistro e, se quiser contratar assistentes técnicos próprios, poderá fazê-lo, mas neste caso o custo será seu.
+*(Referência: L15040 - Nova lei de seguros)*
+
+---
+
+### Fase 2: Prazos de Análise e Documentação
+
+**11. Enviei todos os documentos. Qual o prazo máximo para a seguradora me dar uma resposta se vai cobrir ou não?**
+**Resposta:** A seguradora tem no máximo 30 dias para se manifestar aceitando ou recusando a cobertura, contados da entrega dos documentos.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**12. E se a seguradora simplesmente não me responder nada nesses 30 dias?**
+**Resposta:** Segundo o novo Marco Legal, o silêncio da seguradora após o prazo legal acarreta a perda do direito de recusar o pagamento. Ou seja, considera-se que o sinistro foi aceito tacitamente.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**13. A seguradora pode ficar pedindo documento novo toda semana para enrolar meu prazo?**
+**Resposta:** Não. A seguradora só pode suspender o prazo de análise (pedindo novos documentos) no máximo duas vezes, e de forma justificada.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**14. A seguradora pediu um documento público que eles mesmos conseguem puxar na internet. Sou obrigado a enviar?**
+**Resposta:** Não. A lei proíbe a seguradora de exigir do segurado documentos que ela já possua ou que sejam de fácil acesso em órgãos públicos ou por terceiros.
+*(Referência: Conheça Nova Lei de Seguros - MDS)*
+
+**15. Meu sinistro foi uma grande explosão na fábrica, muito complexo. O prazo ainda é 30 dias?**
+**Resposta:** Para sinistros excepcionalmente complexos, a Susep poderá estipular um prazo maior para regulação, limitando-se ao teto máximo de 120 dias.
+*(Referência: L15040 / Conheça Nova Lei de Seguros - MDS)*
+
+---
+
+### Fase 3: Inadimplência e Problemas na Apólice
+
+**16. Bati o carro ontem, mas esqueci de pagar o boleto do seguro que venceu na semana passada. Perdi meu seguro?**
+**Resposta:** Se for da segunda parcela em diante, a seguradora não pode cancelar seu seguro imediatamente. Ela precisa primeiro te notificar dando no mínimo 15 dias para você regularizar o pagamento. Seu seguro fica "suspenso" até lá.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**17. Mas se o sinistro acontecer durante esse período de suspensão (antes de eu pagar o atrasado)?**
+**Resposta:** Se a garantia estava suspensa no momento do sinistro, infelizmente não haverá cobertura, mesmo que você pague depois. O ideal é nunca atrasar.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**18. E se o boleto atrasado era o da primeira parcela do seguro?**
+**Resposta:** Nesse caso, a falta de pagamento da primeira parcela (ou parcela única) gera o cancelamento imediato (resolução de pleno direito) da apólice. Você não terá cobertura.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**19. É um seguro coletivo (da minha empresa). A empresa não pagou a fatura. Eu fico desprotegido no sinistro?**
+**Resposta:** Em seguros coletivos, o cancelamento por falta de pagamento do estipulante (empresa) só ocorre após 90 dias da última notificação. Durante esse tempo, a proteção se mantém.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**20. A seguradora pode cancelar minha apólice do nada, dias antes do meu sinistro ocorrer, só porque achou que eu era um cliente ruim?**
+**Resposta:** Não. O cancelamento unilateral imotivado pela seguradora agora é expressamente proibido pela nova lei.
+*(Referência: O que mudou (Nova lei de seguros) - MAG SEGUROS)*
+
+---
+
+### Fase 4: O Pagamento da Indenização
+
+**21. A seguradora analisou tudo e disse "SIM, vamos cobrir". Qual o prazo para o dinheiro cair na minha conta?**
+**Resposta:** A seguradora tem 30 dias contados a partir do reconhecimento formal da cobertura para efetuar o pagamento da indenização.
+*(Referência: Divergências entre a Lei 15.040/24 e as normas já existentes - ENS)*
+
+**22. O que acontece se a seguradora atrasar o pagamento da minha indenização?**
+**Resposta:** Sobre o valor devido incidirá correção monetária, juros moratórios legais e uma multa de 2%, além de você poder cobrar perdas e danos pelo atraso.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**23. Meu carro deu perda total, a seguradora já sabe disso, mas estão brigando pelo valor de uns acessórios. Posso receber logo o valor do carro?**
+**Resposta:** Sim. A lei agora obriga a seguradora a fazer o adiantamento imediato da parte da indenização que já é incontroversa (que não há mais dúvida que é devida).
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**24. O valor que eu recebo de seguro de vida pode ser bloqueado pela justiça por causa de dívidas minhas?**
+**Resposta:** Não. Os capitais segurados devidos em razão de morte ou perda de integridade física são impenhoráveis.
+*(Referência: L15040 - Nova lei de seguros)*
+
+---
+
+### Fase 5: Agravamento de Risco e Alegações da Seguradora
+
+**25. Eu bati o carro porque avancei o sinal vermelho ou estava em excesso de velocidade. A seguradora pode negar dizendo que "agravei o risco"?**
+**Resposta:** A seguradora não pode negar simplesmente alegando isso. A nova lei exige que ela prove o "nexo causal", ou seja, ela tem que provar documentalmente que esse seu ato foi a causa determinante do sinistro. O ônus da prova é dela.
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
+
+**26. E se eu mudei o uso do meu carro (ex: virei Uber) no meio do ano, não avisei a seguradora e bati o carro. Eles negam o sinistro?**
+**Resposta:** Se for comprovado que você omitiu intencionalmente uma mudança tão relevante que a seguradora jamais aceitaria o risco ou cobraria muito mais caro, e isso tem relação com o acidente, a indenização pode ser negada por má-fé.
+*(Referência: O que mudou - MAG SEGUROS / L15040)*
+
+**27. Tenho seguro de vida, tive um infarto. A seguradora negou dizendo que eu já tinha hipertensão e não avisei. Eles estão certos?**
+**Resposta:** Apenas se eles tiverem te perguntado expressamente sobre isso no questionário de saúde na hora da contratação e conseguirem provar que você mentiu ou omitiu voluntariamente a doença preexistente.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**28. Se a apólice disser que "doenças preexistentes não têm cobertura", isso vale?**
+**Resposta:** Se a seguradora não estipulou período de carência, essa exclusão genérica não é permitida sem que provem sua má-fé ao preencher a proposta.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**29. Ocorreu o sinistro (incêndio). A seguradora descobriu que eu aumentei o risco (ex: guardei fogos de artifício em casa). Se eu tiver seguro de vida na mesma seguradora, eles cortam o de vida também?**
+**Resposta:** Não. A lei diz que em seguros de pessoas (vida), mesmo que haja agravamento de risco, a seguradora só pode cobrar a diferença de prêmio, não pode simplesmente cancelar a cobertura ou recusar indenizar.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**30. Pratico esportes radicais nas férias e quebrei a perna. A seguradora de vida pode negar por ser esporte de risco?**
+**Resposta:** Não. A lei diz que é nula qualquer cláusula que exclua o pagamento por morte ou incapacidade decorrente da prática desportiva, serviços militares ou atos humanitários.
+*(Referência: L15040 / O Marco Legal do Seguro entra em vigor - ENS)*
+
+**31. Meu familiar cometeu suicídio. O seguro de vida vai pagar?**
+**Resposta:** O pagamento por suicídio tem uma carência legal exclusiva. Ele só será coberto se ocorrer após os primeiros dois anos de vigência do contrato.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+---
+
+### Fase 6: Negativa de Sinistro e Disputas
+
+**32. A seguradora decidiu não pagar meu sinistro. Como eles me avisam? Pode ser por telefone?**
+**Resposta:** Não. A recusa deve ser expressa, justificada por escrito (motivada) e de forma clara, para que você entenda exatamente qual cláusula ou lei foi aplicada.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**33. Eles negaram dizendo que foi por causa da cláusula 5. Fui processar, e no meio do processo a seguradora disse que, na verdade, negou por causa da cláusula 8. Pode isso?**
+**Resposta:** Não. A seguradora não pode "inovar" nos motivos da recusa judicialmente. O motivo dado na carta de negativa oficial é o que vale, a não ser que surja um fato totalmente novo que ela não conhecia antes.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**34. Li minha apólice e a cláusula que eles usaram para negar o sinistro é muito confusa, dá pra entender duas coisas diferentes. O que a lei diz?**
+**Resposta:** A lei é clara: em caso de ambiguidades ou cláusulas contraditórias, a interpretação do contrato deve ser sempre a mais favorável a você (segurado) ou ao beneficiário.
+*(Referência: Conheça Nova Lei de Seguros - MDS / O Marco Legal do Seguro entra em vigor - ENS)*
+
+**35. A exclusão de cobertura estava escondida no meio de um parágrafo enorme, em letrinhas pequenas. É válido?**
+**Resposta:** Não. As cláusulas que limitam seus direitos ou excluem coberturas devem vir em total destaque no contrato, de forma clara e inequívoca. Do contrário, são consideradas nulas.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**36. A Nota Técnica da Susep dizia uma coisa, mas na minha apólice dizia outra. Qual vale para me pagar o sinistro?**
+**Resposta:** Havendo conflito entre os documentos técnicos da seguradora e a sua apólice/certificado, prevalece o documento que contiver a redação mais benéfica para você.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**37. Posso pedir para a seguradora reavaliar a recusa antes de entrar na Justiça?**
+**Resposta:** Sim, você pode pedir uma reconsideração (recurso administrativo). E o mais importante: enquanto eles estiverem reavaliando o seu pedido, os prazos legais para você processar a seguradora ficam suspensos.
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
+
+**38. Eu achei uma injustiça a negativa do meu seguro de carro. Tenho quanto tempo para processar a seguradora?**
+**Resposta:** O prazo prescricional do segurado contra a seguradora é de 1 ano.
+*(Referência: Divergências entre a Lei 15.040/24 - ENS)*
+
+**39. A partir de que dia começo a contar esse 1 ano de prazo para processá-los?**
+**Resposta:** Começa a contar exatamente no dia em que você recebeu a carta expressa e motivada da seguradora informando a recusa do sinistro.
+*(Referência: L15040 / Divergências ENS)*
+
+**40. Meu pai faleceu e a seguradora não quis pagar o seguro de vida. Eu, como filho beneficiário, tenho 1 ano também?**
+**Resposta:** Não. Para terceiros e beneficiários de seguro de vida acionarem a seguradora, o prazo de prescrição é maior: são 3 anos contados do fato gerador.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**41. Durante um processo judicial pelo meu sinistro, quem tem que provar que eu estava errado: eu ou a seguradora?**
+**Resposta:** Cabe à seguradora o "ônus da prova". Se você apresentar provas básicas de que o dano ocorreu, é a seguradora que tem a obrigação de provar que a lesão não existiu ou que foi culpa sua/excluída pelo contrato.
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
+
+**42. Onde eu dou entrada na ação judicial? Na cidade onde fica a sede da seguradora?**
+**Resposta:** Não. O Marco Legal definiu que o foro competente é o de seu domicílio (onde você mora). Isso facilita a sua vida como consumidor.
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**43. Minha apólice tem uma cláusula me obrigando a resolver os problemas de sinistro por "Arbitragem", sem poder ir para a Justiça comum. Sou obrigado?**
+**Resposta:** A arbitragem só é válida se você concordou com ela expressamente em um documento apartado (separado da apólice), com assinatura específica para isso, e ela deve ocorrer no Brasil.
+*(Referência: FAQ da Lei nº 15.040/2024 / L15040)*
+
+---
+
+### Fase 7: Informações Adicionais Úteis
+
+**44. Fui renovar meu seguro de vida e pediram nova carência porque tive um sinistro (doença) recente. Pode?**
+**Resposta:** Não. Nas renovações de seguros de vida, é vedada a imposição de novo período de carência ou exclusão de fatos preexistentes consolidados.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**45. Eu não sei quem meu irmão colocou como beneficiário no seguro de vida dele. O que a seguradora faz com o dinheiro?**
+**Resposta:** Se a seguradora for notificada da morte e não localizar os beneficiários, ela deve buscar por eles ativamente. Se não achar ninguém após 3 anos, o valor vai para o Fundo Nacional para Calamidades Públicas (Funcap).
+*(Referência: O Marco Legal do Seguro entra em vigor - ENS)*
+
+**46. Eu estava devendo parcelas e a seguradora cancelou minha Previdência/Vida Resgatável (VGBL). Perdi tudo que guardei?**
+**Resposta:** Não. Nos produtos com formação de reserva (acumulação financeira), mesmo se houver quebra de contrato por inadimplência, o saldo acumulado continua sendo seu e você tem direito ao resgate.
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**47. Meu seguro é coletivo. Eu preciso entrar na justiça contra a seguradora ou a empresa que eu trabalho pode fazer isso por mim?**
+**Resposta:** O estipulante (a empresa) tem poderes expressos na lei para substituir os segurados e atuar em nome do grupo para buscar o pagamento de indenizações contra a seguradora.
+*(Referência: L15040 - Nova lei de seguros)*
+
+**48. Antes de procurar um advogado ou a justiça, tem algum lugar de graça para eu reclamar de um sinistro negado injustamente?**
+**Resposta:** Sim. O guia do consumidor orienta a buscar o SAC, Ouvidoria e canais administrativos gratuitos, como o portal "Consumidor.gov.br", que são mais rápidos e menos onerosos que a via judicial.
+*(Referência: 03_Lei_o_que_o_consumidor_precisa_saber)*
+
+**49. O que a minha corretora pode sofrer se eu provar que o sinistro foi negado por um erro dela (esquecimento de enviar papéis)?**
+**Resposta:** Pela nova lei, a falha do corretor em entregar seus documentos à seguradora no prazo gera presunção legal de culpa, e ele pode ser condenado a te indenizar por "perdas e danos" (pagar do bolso dele o seu sinistro).
+*(Referência: FAQ da Lei nº 15.040/2024)*
+
+**50. Meu sinistro ocorreu antes de 11 de dezembro de 2025 (data que a lei entra em vigor). Essa lei me ajuda?**
+**Resposta:** Não diretamente. A lei só se aplica aos contratos novos ou renovados a partir de 11/12/2025, bem como a sinistros ocorridos sob a vigência desses novos contratos. Os fatos anteriores seguem a lei velha (Código Civil atual).
+*(Referência: Seis pontos sobre mudanças trazidas pelo Marco Legal - Fenacor)*
