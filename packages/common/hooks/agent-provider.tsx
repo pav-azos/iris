@@ -162,13 +162,28 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
                 });
             });
 
+            // Build history array for /api/chat from coreMessages
+            const history: Array<{ role: 'user' | 'assistant'; content: string }> = (
+                body.messages || []
+            )
+                .filter(
+                    (m: any) =>
+                        (m.role === 'user' || m.role === 'assistant') &&
+                        typeof m.content === 'string'
+                )
+                .map((m: any) => ({ role: m.role as 'user' | 'assistant', content: m.content }))
+                .slice(-12);
+
             try {
-                const response = await fetch('/api/completion', {
+                const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(body),
-                    credentials: 'include',
-                    cache: 'no-store',
+                    body: JSON.stringify({
+                        message: body.prompt || body.question || '',
+                        threadId: body.threadId,
+                        threadItemId: body.threadItemId,
+                        history,
+                    }),
                     signal: abortController.signal,
                 });
 
@@ -177,7 +192,7 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
 
                     if (response.status === 429) {
                         errorText =
-                            'You have reached the daily limit of requests. Please try again tomorrow.';
+                            'Limite de requisições atingido. Aguarde um momento.';
                     }
 
                     setIsGenerating(false);
@@ -188,7 +203,7 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
                         persistToDB: true,
                     });
                     console.error('Error response:', errorText);
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    return;
                 }
 
                 if (!response.body) {
@@ -196,82 +211,100 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
                 }
 
                 const reader = response.body.getReader();
-                const decoder = new TextDecoder();
+                const dec = new TextDecoder();
+                let buf = '';
+                let currentEvent = '';
                 let lastDbUpdate = Date.now();
                 const DB_UPDATE_INTERVAL = 1000;
-                let eventCount = 0;
                 const streamStartTime = performance.now();
-
-                let buffer = '';
 
                 while (true) {
                     try {
-                        const { value, done } = await reader.read();
+                        const { done, value } = await reader.read();
                         if (done) break;
 
-                        buffer += decoder.decode(value, { stream: true });
-                        const messages = buffer.split('\n\n');
-                        buffer = messages.pop() || '';
+                        buf += dec.decode(value, { stream: true });
+                        const lines = buf.split('\n');
+                        buf = lines.pop() ?? '';
 
-                        for (const message of messages) {
-                            if (!message.trim()) continue;
+                        for (const line of lines) {
+                            if (line.startsWith('event: ')) {
+                                currentEvent = line.slice(7).trim();
+                                continue;
+                            }
+                            if (!line.startsWith('data: ')) continue;
 
-                            const eventMatch = message.match(/^event: (.+)$/m);
-                            const dataMatch = message.match(/^data: (.+)$/m);
+                            try {
+                                const data = JSON.parse(line.slice(6));
 
-                            if (eventMatch && dataMatch) {
-                                const currentEvent = eventMatch[1];
-                                eventCount++;
-
-                                try {
-                                    const data = JSON.parse(dataMatch[1]);
-                                    if (
-                                        EVENT_TYPES.includes(currentEvent) &&
-                                        data?.threadId &&
-                                        data?.threadItemId
-                                    ) {
-                                        const shouldPersistToDB =
-                                            Date.now() - lastDbUpdate >= DB_UPDATE_INTERVAL;
-                                        handleThreadItemUpdate(
-                                            data.threadId,
-                                            data.threadItemId,
-                                            currentEvent,
-                                            data,
-                                            data.parentThreadItemId,
-                                            shouldPersistToDB
-                                        );
-                                        if (shouldPersistToDB) {
-                                            lastDbUpdate = Date.now();
-                                        }
-                                    } else if (currentEvent === 'done' && data.type === 'done') {
-                                        setIsGenerating(false);
-                                        const streamDuration = performance.now() - streamStartTime;
-                                        console.log(
-                                            'done event received',
-                                            eventCount,
-                                            `Stream duration: ${streamDuration.toFixed(2)}ms`
-                                        );
-                                        setTimeout(fetchRemainingCredits, 1000);
-                                        if (data.threadItemId) {
-                                            threadItemMap.delete(data.threadItemId);
-                                        }
-                                        if (data.status === 'error') {
-                                            console.error('Stream error:', data.error);
-                                        }
-                                    }
-                                } catch (jsonError) {
-                                    console.warn(
-                                        'JSON parse error for data:',
-                                        dataMatch[1],
-                                        jsonError
+                                if (currentEvent === 'token') {
+                                    const shouldPersistToDB =
+                                        Date.now() - lastDbUpdate >= DB_UPDATE_INTERVAL;
+                                    handleThreadItemUpdate(
+                                        body.threadId,
+                                        body.threadItemId,
+                                        'answer',
+                                        {
+                                            answer: { text: data.content ?? '' },
+                                            mode: body.mode,
+                                            query: body.prompt || body.question || '',
+                                        },
+                                        undefined,
+                                        shouldPersistToDB
                                     );
+                                    if (shouldPersistToDB) {
+                                        lastDbUpdate = Date.now();
+                                    }
+                                } else if (currentEvent === 'sources') {
+                                    const chunks: any[] = data.chunks ?? [];
+                                    // Store sources on the thread item
+                                    updateThreadItem(body.threadId, {
+                                        id: body.threadItemId,
+                                        sources: chunks.map((c: any, idx: number) => ({
+                                            title: c.source ?? `Fonte ${idx + 1}`,
+                                            link: c.source ?? '',
+                                            index: idx,
+                                            snippet: c.text ?? '',
+                                        })),
+                                    });
+                                    // Also update current sources list
+                                    setCurrentSources(
+                                        chunks.map((c: any) => c.source ?? '').filter(Boolean)
+                                    );
+                                } else if (currentEvent === 'done') {
+                                    const streamDuration = performance.now() - streamStartTime;
+                                    console.info(
+                                        `ÍRIS stream done in ${streamDuration.toFixed(2)}ms`
+                                    );
+                                    // Persist final state
+                                    updateThreadItem(body.threadId, {
+                                        id: body.threadItemId,
+                                        status: 'COMPLETED',
+                                        persistToDB: true,
+                                    });
+                                    setIsGenerating(false);
+                                    setTimeout(fetchRemainingCredits, 1000);
+                                    threadItemMap.delete(body.threadItemId);
+                                } else if (currentEvent === 'error') {
+                                    const errMsg =
+                                        data.message ?? 'Falha na conexão com ÍRIS';
+                                    updateThreadItem(body.threadId, {
+                                        id: body.threadItemId,
+                                        status: 'ERROR',
+                                        error: errMsg,
+                                        persistToDB: true,
+                                    });
+                                    setIsGenerating(false);
                                 }
+
+                                currentEvent = '';
+                            } catch (jsonError) {
+                                console.warn('JSON parse error:', line.slice(6), jsonError);
                             }
                         }
                     } catch (readError) {
                         console.error('Error reading from stream:', readError);
-                        await new Promise(resolve => setTimeout(resolve, 1000));
-                        continue;
+                        break;
                     }
                 }
             } catch (streamError: any) {
@@ -288,17 +321,11 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
                         status: 'ABORTED',
                         error: 'Generation aborted',
                     });
-                } else if (streamError.message.includes('429')) {
-                    updateThreadItem(body.threadId, {
-                        id: body.threadItemId,
-                        status: 'ERROR',
-                        error: 'You have reached the daily limit of requests. Please try again tomorrow or Use your own API key.',
-                    });
                 } else {
                     updateThreadItem(body.threadId, {
                         id: body.threadItemId,
                         status: 'ERROR',
-                        error: 'Something went wrong. Please try again.',
+                        error: 'Falha na conexão com ÍRIS. Tente novamente.',
                     });
                 }
             } finally {
@@ -313,8 +340,8 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
             setIsGenerating,
             updateThreadItem,
             handleThreadItemUpdate,
+            setCurrentSources,
             fetchRemainingCredits,
-            EVENT_TYPES,
             threadItemMap,
         ]
     );

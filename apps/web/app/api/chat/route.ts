@@ -10,8 +10,8 @@ const EMBED_MODEL      = process.env.OLLAMA_EMBED_MODEL ?? 'bge-m3';
 
 const schema = z.object({
   message:     z.string().min(1).max(2000),
-  threadId:    z.string().uuid(),
-  threadItemId: z.string().uuid(),
+  threadId:    z.string().min(1),
+  threadItemId: z.string().min(1),
   history: z.array(z.object({
     role:    z.enum(['user', 'assistant']),
     content: z.string().max(4000),
