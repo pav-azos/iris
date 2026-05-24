@@ -10,13 +10,10 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
+import { IRIS_SYSTEM_PROMPT } from "../packages/rag/prompt-builder";
 
-// ---------------------------------------------------------------------------
-// Paths
-// ---------------------------------------------------------------------------
 const ROOT = join(import.meta.dir, "..");
-const DOCS = join(ROOT, "docs");
-const OUT_DIR = join(DOCS, "data");
+const OUT_DIR = join(ROOT, "docs", "data");
 const OUT_FILE = join(OUT_DIR, "finetune-dataset.jsonl");
 const TRAIN_FILE = join(OUT_DIR, "train.jsonl");
 const VALID_FILE = join(OUT_DIR, "valid.jsonl");
@@ -24,21 +21,13 @@ const VALID_FILE = join(OUT_DIR, "valid.jsonl");
 mkdirSync(OUT_DIR, { recursive: true });
 
 // ---------------------------------------------------------------------------
-// System prompt ÍRIS
+// Types
 // ---------------------------------------------------------------------------
-const SYSTEM_PROMPT = `Você é ÍRIS — Inteligência em Regulação e Informação Securitária.
-Especialista na Lei 15.040/2024 (Marco Legal do Seguro brasileiro).
+export interface QAPair {
+  question: string;
+  answer: string;
+}
 
-Regras de comportamento:
-1. Responda APENAS sobre a Lei 15.040/2024 e seus impactos no mercado de seguros.
-2. Cite sempre o artigo ou fonte específica ao responder (ex: "Pelo Art. 45 da Lei 15.040/2024...").
-3. Se não souber ou o assunto fugir da lei de seguros, diga: "Não tenho informação sobre isso na minha base de conhecimento."
-4. Seja precisa, objetiva e profissional. Sem floreios.
-5. Nunca invente dados, prazos, valores ou artigos.`;
-
-// ---------------------------------------------------------------------------
-// Tipos
-// ---------------------------------------------------------------------------
 interface Message {
   role: "system" | "user" | "assistant";
   content: string;
@@ -49,82 +38,41 @@ interface TrainingExample {
 }
 
 // ---------------------------------------------------------------------------
-// Parser: FAQ MD (formato **N. Pergunta?** \n **Resposta:** Texto)
+// Parser: Extract Q&A pairs from FAQ format
+// Pattern: **N. Question** ... **Resposta:** Answer
 // ---------------------------------------------------------------------------
-function parseFaqMd(text: string): Array<{ q: string; a: string }> {
-  const pairs: Array<{ q: string; a: string }> = [];
+const QA_PATTERN = /\*\*(\d+)\.\s*(.+?)\*\*[\s\S]*?\*\*Resposta:\*\*\s*([\s\S]+?)(?=\*\*\d+\.|$)/g;
 
-  // Captura **N. Pergunta** + **Resposta:** conteúdo
-  const questionRegex =
-    /\*\*\d+\.\s+([^*]+?)\*\*\s*\n\*\*Resposta:\*\*\s*([\s\S]+?)(?=\n\*\*\d+\.|$)/gm;
-
-  let match;
-  while ((match = questionRegex.exec(text)) !== null) {
-    const q = match[1].trim().replace(/\?$/, "") + "?";
-    // Remove referências entre parênteses e limpa espaços
-    const a = match[2]
-      .replace(/\*\(Referência:[^)]*\)\*/g, "")
-      .replace(/\n+/g, " ")
+export function parseQAPairs(text: string): QAPair[] {
+  const pairs: QAPair[] = [];
+  for (const match of text.matchAll(QA_PATTERN)) {
+    const question = match[2].replace(/\*+/g, "").trim();
+    const answer = match[3]
+      .split("\n")
+      .filter((l) => !l.startsWith("*(Referência") && l.trim())
+      .join(" ")
+      .replace(/\*+/g, "")
       .trim();
-
-    if (q.length > 10 && a.length > 20) {
-      pairs.push({ q, a });
-    }
+    if (question && answer) pairs.push({ question, answer });
   }
-
   return pairs;
 }
 
 // ---------------------------------------------------------------------------
-// Parser: FAQ.txt (flashcard — "**P:** ... **R:** ...")
+// Format: Convert Q&A pair to MLX training entry
 // ---------------------------------------------------------------------------
-function parseFaqTxt(text: string): Array<{ q: string; a: string }> {
-  const pairs: Array<{ q: string; a: string }> = [];
-  const lines = text.split("\n");
-  let currentQ = "";
-
-  for (const line of lines) {
-    const trimmed = line.trim();
-
-    // Pergunta: termina com ? e não é resposta
-    if (
-      trimmed.endsWith("?") &&
-      trimmed.length > 15 &&
-      !trimmed.startsWith("**R:")
-    ) {
-      currentQ = trimmed
-        .replace(/^\*\*P:\*\*\s*/, "")
-        .replace(/^\d+\.\s*/, "");
-    }
-
-    // Resposta
-    if (trimmed.startsWith("**R:**") && currentQ) {
-      const a = trimmed.replace(/^\*\*R:\*\*\s*/, "").trim();
-      if (a.length > 20) {
-        pairs.push({ q: currentQ, a });
-        currentQ = "";
-      }
-    }
-  }
-
-  return pairs;
-}
-
-// ---------------------------------------------------------------------------
-// Converte par Q&A em exemplo de treino MLX
-// ---------------------------------------------------------------------------
-function toTrainingExample(q: string, a: string): TrainingExample {
-  return {
+export function formatMLXEntry(question: string, answer: string): string {
+  return JSON.stringify({
     messages: [
-      { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: q },
-      { role: "assistant", content: a },
+      { role: "system", content: IRIS_SYSTEM_PROMPT },
+      { role: "user", content: question },
+      { role: "assistant", content: answer },
     ],
-  };
+  });
 }
 
 // ---------------------------------------------------------------------------
-// Shuffle com seed fixo (reproducibilidade)
+// Shuffle with fixed seed for reproducibility
 // ---------------------------------------------------------------------------
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -144,28 +92,23 @@ function shuffle<T>(arr: T[]): T[] {
 // Main
 // ---------------------------------------------------------------------------
 function main() {
-  const allPairs: Array<{ q: string; a: string }> = [];
+  const allPairs: QAPair[] = [];
 
-  // 1. FAQ principal (arquivo .txt com formato MD)
-  const faqMdPath = join(DOCS, "Agente FAQ Lei Geral Seguros.txt");
-  if (existsSync(faqMdPath)) {
-    const text = readFileSync(faqMdPath, "utf-8");
-    const pairs = parseFaqMd(text);
-    console.log(`✓ FAQ principal: ${pairs.length} pares`);
-    allPairs.push(...pairs);
-  } else {
-    console.warn(`⚠ Não encontrado: ${faqMdPath}`);
-  }
+  // Source files
+  const sources = [
+    join(ROOT, "docs", "Agente FAQ Lei Geral Seguros.txt"),
+    join(OUT_DIR, "FAQ.txt"),
+  ];
 
-  // 2. FAQ.txt adicional (flashcards)
-  const faqTxtPath = join(OUT_DIR, "FAQ.txt");
-  if (existsSync(faqTxtPath)) {
-    const text = readFileSync(faqTxtPath, "utf-8");
-    const pairs = parseFaqTxt(text);
-    console.log(`✓ FAQ.txt: ${pairs.length} pares`);
-    allPairs.push(...pairs);
-  } else {
-    console.log(`ℹ  FAQ.txt não encontrado — apenas FAQ principal será usado`);
+  for (const src of sources) {
+    try {
+      const text = readFileSync(src, "utf-8");
+      const pairs = parseQAPairs(text);
+      console.log(`✓ ${src.split("/").pop()}: ${pairs.length} pares`);
+      allPairs.push(...pairs);
+    } catch {
+      console.warn(`⚠ Não encontrado: ${src}`);
+    }
   }
 
   if (allPairs.length === 0) {
@@ -173,10 +116,10 @@ function main() {
     process.exit(1);
   }
 
-  // Remove duplicatas por chave de pergunta (primeiros 60 chars lowercase)
+  // Remove duplicatas por chave de pergunta
   const seen = new Set<string>();
-  const unique = allPairs.filter(({ q }) => {
-    const key = q.toLowerCase().slice(0, 60);
+  const unique = allPairs.filter(({ question }) => {
+    const key = question.toLowerCase().slice(0, 60);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -184,16 +127,17 @@ function main() {
 
   console.log(`✓ Pares únicos: ${unique.length}`);
 
-  // Converte + shuffle + split 80/20
-  const examples = unique.map(({ q, a }) => toTrainingExample(q, a));
+  // Convert + shuffle + split 80/20
+  const examples = unique.map(({ question, answer }) =>
+    formatMLXEntry(question, answer)
+  );
   const shuffled = shuffle(examples);
   const splitIdx = Math.floor(shuffled.length * 0.8);
   const train = shuffled.slice(0, splitIdx);
   const valid = shuffled.slice(splitIdx);
 
-  // Serializa como JSONL (uma linha por exemplo)
-  const toJsonl = (items: TrainingExample[]) =>
-    items.map((e) => JSON.stringify(e)).join("\n");
+  // Serialize as JSONL
+  const toJsonl = (items: string[]) => items.join("\n");
 
   writeFileSync(OUT_FILE, toJsonl(shuffled));
   writeFileSync(TRAIN_FILE, toJsonl(train));
@@ -211,4 +155,6 @@ function main() {
   console.log("→ Próximo: bash scripts/finetune.sh");
 }
 
-main();
+if (import.meta.main) {
+  main();
+}
