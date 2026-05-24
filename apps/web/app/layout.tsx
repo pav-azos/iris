@@ -16,53 +16,12 @@ const bricolage = Bricolage_Grotesque({
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: 'llmchat.co - Go Deeper with AI-Powered Research & Agentic Workflows',
+    title: 'ÍRIS — Inteligência em Regulação e Informação Securitária',
     description:
-        'Experience deep, AI-powered research with agentic workflows and a wide variety of models for advanced productivity.',
-    keywords: 'AI chat, LLM, language models, privacy, minimal UI, ollama, chatgpt',
-    authors: [{ name: 'Trendy design', url: 'https://trendy.design' }],
-    creator: 'Trendy design',
-    publisher: 'Trendy design',
-    openGraph: {
-        title: 'llmchat.co - Go Deeper with AI-Powered Research & Agentic Workflows',
-        siteName: 'llmchat.co',
-        description:
-            'Experience deep, AI-powered research with agentic workflows and a wide variety of models for advanced productivity.',
-        url: 'https://llmchat.co',
-        type: 'website',
-        locale: 'en_US',
-        images: [
-            {
-                url: 'https://llmchat.co/og-image.jpg',
-                width: 1200,
-                height: 630,
-                alt: 'LLMChat Preview',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'llmchat.co - Go Deeper with AI-Powered Research & Agentic Workflows',
-        site: 'llmchat.co',
-        creator: '@llmchat_co',
-        description:
-            'Experience deep, AI-powered research with agentic workflows and a wide variety of models for advanced productivity.',
-        images: ['https://llmchat.co/twitter-image.jpg'],
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
-    },
-    alternates: {
-        canonical: 'https://llmchat.co',
-    },
+        'Agente especialista na Lei nº 15.040/2024 (Marco Legal do Seguro Brasileiro). ' +
+        'Tire dúvidas sobre direitos, prazos e obrigações com base na lei.',
+    keywords: 'lei 15040, marco legal do seguro, SUSEP, corretor de seguros, segurado',
+    robots: { index: false, follow: false },
 };
 
 export const viewport: Viewport = {
@@ -89,7 +48,7 @@ export default function ParentLayout({
 }>) {
     return (
         <html
-            lang="en"
+            lang="pt-BR"
             className={cn(GeistMono.variable, inter.variable, clash.variable, bricolage.variable)}
             suppressHydrationWarning
         >
