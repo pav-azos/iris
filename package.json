@@ -13,7 +13,10 @@
         "augment-dataset:dry": "bun scripts/augment-dataset.ts --dry-run",
         "finetune": "bash scripts/finetune.sh",
         "finetune:dry": "bash scripts/finetune.sh --dry-run",
-        "setup-finetune": "bash scripts/setup-finetune.sh"
+        "setup-finetune": "bash scripts/setup-finetune.sh",
+        "eval-model": "bun scripts/eval-model.ts",
+        "eval-model:baseline": "OLLAMA_MODEL=mistral:7b-instruct bun scripts/eval-model.ts --limit 20",
+        "eval-model:finetuned": "OLLAMA_MODEL=iris-mistral bun scripts/eval-model.ts --limit 20"
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^8.25.0",
