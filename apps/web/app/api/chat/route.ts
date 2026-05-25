@@ -12,6 +12,8 @@ const schema = z.object({
   message:     z.string().min(1).max(2000),
   threadId:    z.string().min(1),
   threadItemId: z.string().min(1),
+  model:       z.string().min(1).optional(),
+  ollamaBaseUrl: z.string().url().optional(),
   history: z.array(z.object({
     role:    z.enum(['user', 'assistant']),
     content: z.string().max(4000),
@@ -39,7 +41,9 @@ export async function POST(request: NextRequest): Promise<Response> {
     return Response.json({ error: 'Requisição inválida', details: parsed.error.format() }, { status: 400 });
   }
 
-  const { message, threadId, threadItemId, history } = parsed.data;
+  const { message, threadId, threadItemId, history, model, ollamaBaseUrl: reqBaseUrl } = parsed.data;
+  const effectiveModel   = model       ?? OLLAMA_MODEL;
+  const effectiveBaseUrl = reqBaseUrl  ?? OLLAMA_BASE_URL;
   const abort = new AbortController();
   request.signal.addEventListener('abort', () => abort.abort());
 
@@ -49,7 +53,7 @@ export async function POST(request: NextRequest): Promise<Response> {
       const send = (event: string, data: unknown) => ctrl.enqueue(enc.encode(sse(event, data)));
 
       try {
-        const queryEmb = await ollamaEmbed(message, { baseUrl: OLLAMA_BASE_URL, model: EMBED_MODEL });
+        const queryEmb = await ollamaEmbed(message, { baseUrl: effectiveBaseUrl, model: EMBED_MODEL });
         const corpus   = await getCorpus();
         const results  = search(queryEmb, corpus, 5);
 
@@ -67,7 +71,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 
         for await (const token of ollamaStream(
           messages as Array<{ role: 'system'|'user'|'assistant'; content: string }>,
-          { baseUrl: OLLAMA_BASE_URL, model: OLLAMA_MODEL },
+          { baseUrl: effectiveBaseUrl, model: effectiveModel },
           abort.signal
         )) {
           send('token', { content: token });

@@ -2,7 +2,7 @@
 import { useMcpToolsStore } from '@repo/common/store';
 import { Alert, AlertDescription, DialogFooter } from '@repo/ui';
 import { Button } from '@repo/ui/src/components/button';
-import { IconBolt, IconBoltFilled, IconKey, IconSettings2, IconTrash } from '@tabler/icons-react';
+import { IconBolt, IconBoltFilled, IconKey, IconRobot, IconSettings2, IconTrash } from '@tabler/icons-react';
 
 import { Badge, Dialog, DialogContent, Input } from '@repo/ui';
 
@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { ApiKeys, useApiKeysStore } from '../store/api-keys.store';
 import { SETTING_TABS, useAppStore } from '../store/app.store';
 import { useChatStore } from '../store/chat.store';
+import { OLLAMA_MODELS, Provider, PROVIDER_LABELS, useProviderStore } from '../store/provider.store';
 import { ChatEditor } from './chat-input';
 import { BYOKIcon, ToolIcon } from './icons';
 
@@ -22,6 +23,12 @@ export const SettingsModal = () => {
     const setSettingTab = useAppStore(state => state.setSettingTab);
 
     const settingMenu = [
+        {
+            icon: <IconRobot size={16} strokeWidth={2} className="text-muted-foreground" />,
+            title: 'Modelo',
+            key: SETTING_TABS.MODEL,
+            component: <ModelSettings />,
+        },
         {
             icon: <IconSettings2 size={16} strokeWidth={2} className="text-muted-foreground" />,
             title: 'Customize',
@@ -453,6 +460,195 @@ export const CreditsSettings = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+        </div>
+    );
+};
+
+// ---------------------------------------------------------------------------
+// Model / Provider Settings
+// ---------------------------------------------------------------------------
+
+type VerifyStatus = 'idle' | 'loading' | 'ok' | 'error';
+
+const PROVIDER_ORDER: Provider[] = ['ollama', 'openai', 'anthropic'];
+
+export const ModelSettings = () => {
+    const { selectedProvider, selectedModel, ollamaBaseUrl, setSelectedProvider, setSelectedModel, setOllamaBaseUrl } =
+        useProviderStore();
+    const apiKeys = useApiKeysStore(state => state.getAllKeys());
+    const setApiKey = useApiKeysStore(state => state.setKey);
+
+    const [verifyStatus, setVerifyStatus] = useState<VerifyStatus>('idle');
+    const [verifyError, setVerifyError] = useState('');
+    const [draftKey, setDraftKey] = useState<Record<string, string>>({});
+
+    const handleVerify = async () => {
+        setVerifyStatus('loading');
+        setVerifyError('');
+
+        try {
+            if (selectedProvider === 'ollama') {
+                const res = await fetch(`${ollamaBaseUrl}/api/tags`);
+                if (!res.ok) throw new Error(`Ollama respondeu ${res.status}`);
+                const data = await res.json();
+                const models: string[] = (data.models ?? []).map((m: any) => m.name as string);
+                const found = models.some(n => n.startsWith(selectedModel.replace(':latest', '')));
+                if (!found) {
+                    throw new Error(
+                        `Modelo "${selectedModel}" não encontrado no Ollama. Modelos disponíveis: ${models.join(', ') || '(nenhum)'}`
+                    );
+                }
+                setVerifyStatus('ok');
+                return;
+            }
+
+            if (selectedProvider === 'openai') {
+                const key = draftKey['openai'] ?? apiKeys.OPENAI_API_KEY ?? '';
+                if (!key) throw new Error('Insira a chave OpenAI primeiro.');
+                const res = await fetch('https://api.openai.com/v1/models', {
+                    headers: { Authorization: `Bearer ${key}` },
+                });
+                if (!res.ok) throw new Error(`OpenAI recusou a chave (${res.status})`);
+                setApiKey('OPENAI_API_KEY', key);
+                setVerifyStatus('ok');
+                return;
+            }
+
+            if (selectedProvider === 'anthropic') {
+                const key = draftKey['anthropic'] ?? apiKeys.ANTHROPIC_API_KEY ?? '';
+                if (!key) throw new Error('Insira a chave Anthropic primeiro.');
+                const res = await fetch('https://api.anthropic.com/v1/models', {
+                    headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+                });
+                if (!res.ok) throw new Error(`Anthropic recusou a chave (${res.status})`);
+                setApiKey('ANTHROPIC_API_KEY', key);
+                setVerifyStatus('ok');
+                return;
+            }
+        } catch (err) {
+            setVerifyStatus('error');
+            setVerifyError(err instanceof Error ? err.message : 'Falha desconhecida');
+        }
+    };
+
+    const currentKey =
+        selectedProvider === 'openai'
+            ? (draftKey['openai'] ?? apiKeys.OPENAI_API_KEY ?? '')
+            : selectedProvider === 'anthropic'
+              ? (draftKey['anthropic'] ?? apiKeys.ANTHROPIC_API_KEY ?? '')
+              : '';
+
+    const setCurrentDraftKey = (val: string) =>
+        setDraftKey(prev => ({ ...prev, [selectedProvider]: val }));
+
+    return (
+        <div className="flex flex-col gap-6">
+            <div className="flex flex-col">
+                <h2 className="text-base font-semibold">Modelo de Inferência</h2>
+                <p className="text-muted-foreground text-xs">
+                    Selecione o provedor e o modelo para o ÍRIS responder perguntas.
+                </p>
+            </div>
+
+            {/* Provider selector */}
+            <div className="flex flex-col gap-2">
+                <span className="text-sm font-medium">Provedor</span>
+                <div className="flex flex-row gap-2">
+                    {PROVIDER_ORDER.map(p => (
+                        <button
+                            key={p}
+                            onClick={() => { setSelectedProvider(p); setVerifyStatus('idle'); setVerifyError(''); }}
+                            className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
+                                selectedProvider === p
+                                    ? 'border-primary bg-primary/10 text-primary'
+                                    : 'border-border text-muted-foreground hover:border-primary/50'
+                            }`}
+                        >
+                            {PROVIDER_LABELS[p]}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Ollama-specific controls */}
+            {selectedProvider === 'ollama' && (
+                <>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-sm font-medium">Modelo</span>
+                        <div className="flex flex-col gap-1.5">
+                            {OLLAMA_MODELS.map(m => (
+                                <button
+                                    key={m.id}
+                                    onClick={() => { setSelectedModel(m.id); setVerifyStatus('idle'); }}
+                                    className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${
+                                        selectedModel === m.id
+                                            ? 'border-primary bg-primary/10'
+                                            : 'border-border hover:border-primary/50'
+                                    }`}
+                                >
+                                    <span className={`size-2 rounded-full ${selectedModel === m.id ? 'bg-primary' : 'bg-muted-foreground/30'}`} />
+                                    <span className="flex-1">{m.label}</span>
+                                    {m.isDefault && (
+                                        <Badge variant="secondary" className="text-xs">padrão</Badge>
+                                    )}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-sm font-medium">URL do Ollama</span>
+                        <Input
+                            value={ollamaBaseUrl}
+                            onChange={e => { setOllamaBaseUrl(e.target.value); setVerifyStatus('idle'); }}
+                            placeholder="http://localhost:11434"
+                        />
+                    </div>
+                </>
+            )}
+
+            {/* External provider key */}
+            {(selectedProvider === 'openai' || selectedProvider === 'anthropic') && (
+                <div className="flex flex-col gap-2">
+                    <span className="text-sm font-medium">Chave de API</span>
+                    <Input
+                        type="password"
+                        value={currentKey}
+                        onChange={e => { setCurrentDraftKey(e.target.value); setVerifyStatus('idle'); }}
+                        placeholder={selectedProvider === 'openai' ? 'sk-...' : 'sk-ant-...'}
+                    />
+                </div>
+            )}
+
+            {/* Verify button + status */}
+            <div className="flex flex-col gap-2">
+                <Button
+                    size="sm"
+                    rounded="full"
+                    className="self-start"
+                    onClick={handleVerify}
+                    disabled={verifyStatus === 'loading'}
+                >
+                    {verifyStatus === 'loading' ? 'Verificando…' : 'Verificar conexão'}
+                </Button>
+
+                {verifyStatus === 'ok' && (
+                    <p className="text-sm text-green-500">✓ Conexão verificada com sucesso.</p>
+                )}
+                {verifyStatus === 'error' && (
+                    <p className="text-sm text-destructive">✗ {verifyError}</p>
+                )}
+            </div>
+
+            {/* Active model summary */}
+            <div className="border-border rounded-lg border p-3 text-xs">
+                <span className="text-muted-foreground">Modelo ativo: </span>
+                <span className="font-medium">
+                    {selectedProvider === 'ollama' ? selectedModel : PROVIDER_LABELS[selectedProvider]}
+                </span>
+                {selectedProvider === 'ollama' && (
+                    <span className="text-muted-foreground"> via {ollamaBaseUrl}</span>
+                )}
             </div>
         </div>
     );

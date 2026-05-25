@@ -1,0 +1,88 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "llmchat.co" [ref=e7] [cursor=pointer]:
+          - /url: /chat
+          - generic [ref=e8]:
+            - img [ref=e9]
+            - paragraph [ref=e14]: llmchat.co
+        - button [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+      - generic [ref=e19]:
+        - button "New Thread" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+          - text: New Thread
+        - button "Search K" [ref=e22] [cursor=pointer]:
+          - img [ref=e23]
+          - text: Search
+          - generic [ref=e26]:
+            - img [ref=e28]
+            - generic [ref=e30]: K
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - img [ref=e35]
+          - text: Pinned
+        - paragraph [ref=e38]: No pinned threads
+      - button "Settings" [ref=e41] [cursor=pointer]:
+        - img [ref=e42]
+        - text: Settings
+    - generic [ref=e47]:
+      - generic [ref=e51]:
+        - generic [ref=e53]:
+          - link "Star us on GitHub" [ref=e54] [cursor=pointer]:
+            - /url: https://git.new/llmchat
+          - link "Changelog" [ref=e55] [cursor=pointer]:
+            - /url: https://github.com
+          - link "Feedback" [ref=e56] [cursor=pointer]:
+            - /url: ""
+          - link "Terms" [ref=e57] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e58] [cursor=pointer]:
+            - /url: /privacy
+        - generic [ref=e61]:
+          - generic [ref=e63]:
+            - heading [level=1]
+          - generic [ref=e66]:
+            - generic [ref=e68]:
+              - textbox [active] [ref=e72]:
+                - paragraph [ref=e73]: Ask anything
+              - generic [ref=e74]:
+                - generic [ref=e75]:
+                  - button "Gemini Flash 2.0" [ref=e76] [cursor=pointer]:
+                    - text: Gemini Flash 2.0
+                    - img [ref=e77]
+                  - generic [ref=e79]:
+                    - generic:
+                      - button:
+                        - img
+                    - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                  - generic [ref=e80]:
+                    - generic:
+                      - button:
+                        - img
+                    - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                - button [disabled] [ref=e84]:
+                  - img [ref=e85]
+            - button "Choose File" [ref=e88]
+          - generic [ref=e89]:
+            - button "How to" [ref=e90] [cursor=pointer]:
+              - img [ref=e91]
+              - text: How to
+            - button "Explain Concepts" [ref=e93] [cursor=pointer]:
+              - img [ref=e94]
+              - text: Explain Concepts
+            - button "Creative" [ref=e97] [cursor=pointer]:
+              - img [ref=e98]
+              - text: Creative
+            - button "Advice" [ref=e101] [cursor=pointer]:
+              - img [ref=e102]
+              - text: Advice
+            - button "Analysis" [ref=e105] [cursor=pointer]:
+              - img [ref=e106]
+              - text: Analysis
+      - button [ref=e111] [cursor=pointer]:
+        - img [ref=e112]
+    - region "Notifications (F8)":
+      - list
+  - alert [ref=e114]

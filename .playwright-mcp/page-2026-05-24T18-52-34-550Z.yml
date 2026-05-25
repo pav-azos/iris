@@ -1,0 +1,149 @@
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - link:
+              - /url: /chat
+              - generic:
+                - img
+                - paragraph: llmchat.co
+            - button:
+              - img
+          - generic:
+            - button:
+              - img
+              - text: New Thread
+            - button:
+              - img
+              - text: Search
+              - generic:
+                - generic:
+                  - img
+                - generic: K
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - text: Pinned
+              - generic:
+                - paragraph: No pinned threads
+          - generic:
+            - generic:
+              - button:
+                - img
+                - text: Settings
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: https://git.new/llmchat
+                      - text: Star us on GitHub
+                    - link:
+                      - /url: https://github.com
+                      - text: Changelog
+                    - link:
+                      - /url: ""
+                      - text: Feedback
+                    - link:
+                      - /url: /terms
+                      - text: Terms
+                    - link:
+                      - /url: /privacy
+                      - text: Privacy
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - textbox:
+                                        - paragraph: Ask anything
+                                - generic:
+                                  - generic:
+                                    - button:
+                                      - text: Gemini Flash 2.0
+                                      - img
+                                    - generic:
+                                      - generic:
+                                        - button:
+                                          - img
+                                      - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                                    - generic:
+                                      - generic:
+                                        - button:
+                                          - img
+                                      - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - button [disabled]:
+                                          - img
+                            - button
+                      - generic:
+                        - button:
+                          - img
+                          - text: How to
+                        - button:
+                          - img
+                          - text: Explain Concepts
+                        - button:
+                          - img
+                          - text: Creative
+                        - button:
+                          - img
+                          - text: Advice
+                        - button:
+                          - img
+                          - text: Analysis
+          - generic:
+            - button:
+              - img
+    - list
+  - alert
+  - dialog "Introduction" [ref=e2]:
+    - heading "Introduction" [level=2] [ref=e4]
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7] [cursor=pointer]:
+          - img [ref=e8]
+          - paragraph [ref=e13]: llmchat.co
+        - paragraph [ref=e14]: Private, Open-Source, and Built for You
+      - generic [ref=e15]:
+        - heading "Key benefits:" [level=3] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - img [ref=e19]
+            - paragraph [ref=e22]: "Privacy-focused: Your chat history never leaves your device."
+          - generic [ref=e23]:
+            - img [ref=e24]
+            - paragraph [ref=e27]: "Open source: Fully transparent and modifiable. Easily deploy it yourself."
+          - generic [ref=e28]:
+            - img [ref=e29]
+            - paragraph [ref=e32]: "Research-friendly: Leverage Web Search, Pro Search, and Deep Research features."
+          - generic [ref=e33]:
+            - img [ref=e34]
+            - paragraph [ref=e37]: "Comprehensive model support: Compatible with all mainstream model providers."
+          - generic [ref=e38]:
+            - img [ref=e39]
+            - paragraph [ref=e42]: "BYOK (Bring Your Own Key): Use your own API key for unlimited chat."
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - paragraph [ref=e47]: "MCP Compatibility: Connect with any MCP servers/tools (coming soon)."
+          - generic [ref=e48]:
+            - img [ref=e49]
+            - paragraph [ref=e52]: "Usage Tracking: Monitor your model usage without paying (coming soon)."
+    - button "Close" [active] [ref=e53] [cursor=pointer]:
+      - img [ref=e54]
+      - generic [ref=e57]: Close

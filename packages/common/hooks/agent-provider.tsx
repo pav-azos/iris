@@ -6,7 +6,7 @@ import { buildCoreMessagesFromThreadItems, plausible } from '@repo/shared/utils'
 import { nanoid } from 'nanoid';
 import { useParams } from 'next/navigation';
 import { createContext, ReactNode, useCallback, useContext, useMemo } from 'react';
-import { useApiKeysStore, useChatStore, useMcpToolsStore } from '../store';
+import { useApiKeysStore, useChatStore, useMcpToolsStore, useProviderStore } from '../store';
 
 export type AgentContextType = {
     runAgent: (body: any) => Promise<void>;
@@ -54,6 +54,7 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
     const getSelectedMCP = useMcpToolsStore(state => state.getSelectedMCP);
     const apiKeys = useApiKeysStore(state => state.getAllKeys);
     const hasApiKeyForChatMode = useApiKeysStore(state => state.hasApiKeyForChatMode);
+    const { selectedModel, ollamaBaseUrl } = useProviderStore();
 
     // In-memory store for thread items
     const threadItemMap = useMemo(() => new Map<string, ThreadItem>(), []);
@@ -183,6 +184,8 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
                         threadId: body.threadId,
                         threadItemId: body.threadItemId,
                         history,
+                        model: selectedModel,
+                        ollamaBaseUrl,
                     }),
                     signal: abortController.signal,
                 });
@@ -343,6 +346,8 @@ export const AgentProvider = ({ children }: { children: ReactNode }) => {
             setCurrentSources,
             fetchRemainingCredits,
             threadItemMap,
+            selectedModel,
+            ollamaBaseUrl,
         ]
     );
 

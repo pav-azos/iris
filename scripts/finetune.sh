@@ -17,10 +17,10 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 # Configurações (override via env vars ou flags)
 # ---------------------------------------------------------------------------
-ITERS=${ITERS:-1000}           # iterações de treino (500 rápido / 2000 melhor)
-LORA_LAYERS=${LORA_LAYERS:-16} # camadas LoRA (8 rápido / 16 bom equilíbrio)
-BATCH_SIZE=${BATCH_SIZE:-4}    # batch size (ajustar se OOM)
-LEARNING_RATE=${LEARNING_RATE:-1e-5}
+ITERS=${ITERS:-2000}           # iterações de treino (500 rápido / 2000 melhor)
+LORA_LAYERS=${LORA_LAYERS:-8}  # camadas LoRA (8=estável M4 Pro; 16=OOM)
+BATCH_SIZE=${BATCH_SIZE:-2}    # batch size (2=estável; 4=OOM no M4 Pro 17GB)
+LEARNING_RATE=${LEARNING_RATE:-5e-6}
 BASE_MODEL="mistralai/Mistral-7B-Instruct-v0.3"
 MODEL_NAME="iris-mistral"
 DRY_RUN=false
@@ -102,10 +102,48 @@ else
     --adapter-path "$ADAPTERS_DIR" \
     --val-batches 5 \
     --steps-per-eval 100 \
-    --save-every 200
+    --save-every 100
 fi
 
 echo "✓ Adapters salvos em: $ADAPTERS_DIR"
+
+# ---------------------------------------------------------------------------
+# Seleciona melhor checkpoint por val loss (evita usar último = possível overfit)
+# ---------------------------------------------------------------------------
+LOG_FILE="/tmp/iris-finetune.log"
+BEST_ADAPTER="$ADAPTERS_DIR/adapters.safetensors"  # fallback: final
+
+if [ -f "$LOG_FILE" ]; then
+  echo ""
+  echo "▶ Selecionando melhor checkpoint por val loss..."
+
+  # Extrai "Iter N: Val loss X.XXX" → encontra mínimo
+  BEST_ITER=$(grep "Val loss" "$LOG_FILE" \
+    | grep -v "^Iter 1:" \
+    | awk '{
+        # line: "Iter NNN: Val loss X.XXX, ..."
+        iter=$2; gsub(/:/, "", iter)
+        val=$5; gsub(/,/, "", val)
+        if (min == "" || val+0 < min+0) { min=val; best=iter }
+      } END { print best }')
+
+  if [ -n "$BEST_ITER" ]; then
+    BEST_VAL=$(grep "Iter $BEST_ITER: Val loss" "$LOG_FILE" | awk '{print $5}' | tr -d ',')
+    CHECKPOINT="$ADAPTERS_DIR/$(printf '%07d' "$BEST_ITER")_adapters.safetensors"
+
+    if [ -f "$CHECKPOINT" ]; then
+      BEST_ADAPTER="$CHECKPOINT"
+      echo "  ✓ Melhor: iter $BEST_ITER (val loss $BEST_VAL)"
+      echo "    Checkpoint: $CHECKPOINT"
+    else
+      echo "  ⚠ Checkpoint iter $BEST_ITER não encontrado — usando adapter final"
+    fi
+  else
+    echo "  ⚠ Não foi possível parsear log — usando adapter final"
+  fi
+else
+  echo "  ℹ Log não encontrado — usando adapter final"
+fi
 
 # ---------------------------------------------------------------------------
 # Passo 3: Funde adapters no modelo base
@@ -116,7 +154,7 @@ echo "▶ Passo 3/5 — Fundindo adapters (mlx_lm.fuse)..."
 mkdir -p "$FUSED_DIR"
 
 if [ "$DRY_RUN" = true ]; then
-  echo "  [dry-run] mlx_lm.fuse --model $BASE_MODEL --adapter-path $ADAPTERS_DIR --save-path $FUSED_DIR"
+  echo "  [dry-run] mlx_lm.fuse --model $BASE_MODEL --adapter-file <best_checkpoint> --save-path $FUSED_DIR"
 else
   $PYTHON -m mlx_lm fuse \
     --model "$BASE_MODEL" \
@@ -127,10 +165,12 @@ fi
 echo "✓ Modelo fundido em: $FUSED_DIR"
 
 # ---------------------------------------------------------------------------
-# Passo 4: Converte para GGUF (Q4_K_M — melhor qualidade/tamanho no M4)
+# Passo 4: Converte para GGUF (f16) + quantiza para Q4_K_M
+# Nota: convert_hf_to_gguf.py não aceita q4_k_m diretamente na versão atual.
+#       Fluxo correto: convert → f16 GGUF → llama-quantize → Q4_K_M GGUF
 # ---------------------------------------------------------------------------
 echo ""
-echo "▶ Passo 4/5 — Convertendo para GGUF..."
+echo "▶ Passo 4/5 — Convertendo para GGUF (q8_0 → Q4_K_M)..."
 
 if [ ! -f "$LLAMACPP_DIR/convert_hf_to_gguf.py" ]; then
   echo "✗ llama.cpp não encontrado em $LLAMACPP_DIR"
@@ -138,16 +178,35 @@ if [ ! -f "$LLAMACPP_DIR/convert_hf_to_gguf.py" ]; then
   exit 1
 fi
 
+LLAMA_QUANTIZE="$LLAMACPP_DIR/build/bin/llama-quantize"
+
 if [ "$DRY_RUN" = true ]; then
-  echo "  [dry-run] python $LLAMACPP_DIR/convert_hf_to_gguf.py $FUSED_DIR --outfile $GGUF_FILE --outtype q4_k_m"
+  GGUF_Q8="${GGUF_FILE%.gguf}-q8_0.gguf"
+  echo "  [dry-run] python $LLAMACPP_DIR/convert_hf_to_gguf.py $FUSED_DIR --outfile $GGUF_Q8 --outtype q8_0"
+  echo "  [dry-run] $LLAMA_QUANTIZE --allow-requantize $GGUF_Q8 $GGUF_FILE Q4_K_M"
 else
+  # Passo 4a: converte HuggingFace → GGUF q8_0 (~7.7GB, cabe no disco)
+  # Nota: f16 (~14.5GB) falha em disco com <15GB livres. q8_0 é intermediário seguro.
+  GGUF_Q8="${GGUF_FILE%.gguf}-q8_0.gguf"
   $PYTHON "$LLAMACPP_DIR/convert_hf_to_gguf.py" \
     "$FUSED_DIR" \
-    --outfile "$GGUF_FILE" \
-    --outtype q4_k_m
+    --outfile "$GGUF_Q8" \
+    --outtype q8_0
+
+  # Passo 4b: requantiza q8_0 → Q4_K_M (~4GB)
+  # --allow-requantize necessário pois origem não é f16
+  if [ -f "$LLAMA_QUANTIZE" ]; then
+    "$LLAMA_QUANTIZE" --allow-requantize "$GGUF_Q8" "$GGUF_FILE" Q4_K_M
+    rm -f "$GGUF_Q8"  # remove q8_0 intermediário (~7.7GB)
+    echo "✓ Quantização Q4_K_M concluída — q8_0 intermediário removido"
+  else
+    echo "⚠ llama-quantize não encontrado — mantendo q8_0 GGUF"
+    mv "$GGUF_Q8" "$GGUF_FILE"
+    echo "  Para quantizar manualmente: $LLAMA_QUANTIZE --allow-requantize $GGUF_FILE <out> Q4_K_M"
+  fi
 fi
 
-echo "✓ GGUF gerado: $GGUF_FILE (Q4_K_M)"
+echo "✓ GGUF gerado: $GGUF_FILE"
 
 # ---------------------------------------------------------------------------
 # Passo 5: Registra no Ollama

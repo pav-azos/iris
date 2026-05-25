@@ -1,0 +1,104 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "llmchat.co" [ref=e7] [cursor=pointer]:
+          - /url: /chat
+          - generic [ref=e8]:
+            - img [ref=e9]
+            - paragraph [ref=e14]: llmchat.co
+        - button [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+      - generic [ref=e19]:
+        - link "New" [ref=e130] [cursor=pointer]:
+          - /url: /chat
+          - button "New" [ref=e131]:
+            - img [ref=e132]
+            - text: New
+        - button "Search K" [ref=e22] [cursor=pointer]:
+          - img [ref=e23]
+          - text: Search
+          - generic [ref=e26]:
+            - img [ref=e28]
+            - generic [ref=e30]: K
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - text: Pinned
+          - paragraph [ref=e38]: No pinned threads
+        - generic [ref=e39]:
+          - generic [ref=e40]: Today
+          - generic [ref=e41]:
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e134] [cursor=pointer]:
+              - /url: /chat/16700336-0286-4322-a4a2-78fa08c5b45b
+              - paragraph [ref=e136]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e43] [cursor=pointer]:
+              - /url: /chat/774f66ae-335e-4ec8-8939-d371b9422af0
+              - paragraph [ref=e45]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e47] [cursor=pointer]:
+              - /url: /chat/2f883492-24be-4d4a-8fc7-1d50cd808c17
+              - paragraph [ref=e49]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e51] [cursor=pointer]:
+              - /url: /chat/afaa539f-010f-4671-8a52-82cd6f35c4cd
+              - paragraph [ref=e53]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+      - button "Settings" [ref=e56] [cursor=pointer]:
+        - img [ref=e57]
+        - text: Settings
+    - generic [ref=e62]:
+      - generic [ref=e66]:
+        - generic [ref=e143]:
+          - generic [ref=e146]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+          - generic [ref=e147]:
+            - img [ref=e148]
+            - text: Answer
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154] [cursor=pointer]:
+                - generic [ref=e155]:
+                  - img "favicon" [ref=e158]
+                  - paragraph
+                - paragraph [ref=e159]: FAQ.txt
+              - generic [ref=e160] [cursor=pointer]:
+                - generic [ref=e161]:
+                  - img "favicon" [ref=e164]
+                  - paragraph
+                - paragraph [ref=e165]: L15040 - Nova lei de seguros.pdf
+              - generic [ref=e166] [cursor=pointer]:
+                - generic [ref=e167]:
+                  - img "favicon" [ref=e170]
+                  - paragraph
+                - paragraph [ref=e171]: L15040 - Nova lei de seguros.pdf
+              - generic [ref=e172] [cursor=pointer]:
+                - generic [ref=e173]:
+                  - img "favicon" [ref=e177]
+                  - img "favicon" [ref=e181]
+                - paragraph [ref=e182]: +2 Sources
+            - paragraph [ref=e184]: Conforme estabelecido
+        - generic [ref=e81]:
+          - generic [ref=e83]:
+            - textbox [active] [ref=e87]:
+              - paragraph [ref=e88]: Ask anything
+            - generic [ref=e89]:
+              - generic [ref=e90]:
+                - button "Gemini Flash 2.0" [ref=e91] [cursor=pointer]:
+                  - text: Gemini Flash 2.0
+                  - img [ref=e92]
+                - generic [ref=e94]:
+                  - generic:
+                    - button:
+                      - img
+                  - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                - generic [ref=e95]:
+                  - generic:
+                    - button:
+                      - img
+                  - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+              - button [disabled] [ref=e99]:
+                - img [ref=e100]
+          - button "Choose File" [ref=e103]
+      - button [ref=e126] [cursor=pointer]:
+        - img [ref=e127]
+    - region "Notifications (F8)":
+      - list
+  - alert [ref=e129]

@@ -1,0 +1,650 @@
+[     272ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[     533ms] [ERROR] Failed to initialize SharedWorker: TypeError: Failed to construct 'URL': Invalid URL
+    at initializeWorker (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:149:37)
+    at eval (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:767:13) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[     556ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[     558ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[     591ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/icon-192x192.png:0
+[     604ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/icon-192x192.png (Download error or resource isn't a valid image) @ http://localhost:3000/chat:0
+[     609ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[    4790ms] [LOG] threadItems [] @ webpack-internal:///(app-pages-browser)/../../packages/common/components/chat-input/input.tsx:97
+[    4791ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[    4966ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[    5510ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[    5526ms] [LOG] [Fast Refresh] done in 561ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[    6786ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/icon-192x192.png:0
+[    6787ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/icon-192x192.png (Download error or resource isn't a valid image) @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[    7816ms] [LOG] updateThreadItem {id: x57mFCeISw6ifooWABcU9, sources: Array(5)} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11040ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} true @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11041ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11051ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11051ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11067ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11067ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11088ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11088ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11109ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11109ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11129ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11129ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11151ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11151ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11173ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11173ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11194ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11194ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11215ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11215ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11237ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11237ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11260ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11260ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11279ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11280ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11300ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11300ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11320ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11320ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11340ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11340ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11361ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11361ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11382ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11382ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11402ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11402ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11422ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11422ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11442ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11443ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11463ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11463ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11484ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11484ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11505ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11505ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11512ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://FAQ.txt&size=128:0
+[   11526ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://L15040%20-%20Nova%20lei%20de%20seguros.pdf&size=128:0
+[   11526ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11526ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11546ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11546ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11566ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11566ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11587ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11587ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11607ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11607ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11627ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11627ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11647ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11647ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11667ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11667ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11687ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11687ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11707ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11707ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11727ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11727ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11748ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11748ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11768ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11768ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11788ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11788ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11809ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11809ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11830ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11830ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11851ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11851ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11872ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11872ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11893ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11894ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11915ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11915ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11937ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11937ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11959ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11959ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   11979ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   11980ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12000ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   12000ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12020ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   12020ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12040ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} false @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   12041ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12061ms] [LOG] handleThreadItemUpdate x57mFCeISw6ifooWABcU9 answer {answer: Object, mode: gemini-flash-2.0, query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?} true @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:60
+[   12061ms] [LOG] updateThreadItem {query: Qual o prazo para a seguradora pagar a indenização…aprovação do sinistro, segundo a Lei 15.040/2024?, mode: gemini-flash-2.0, threadId: 16700336-0286-4322-a4a2-78fa08c5b45b, parentId: undefined, id: x57mFCeISw6ifooWABcU9} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12082ms] [INFO] ÍRIS stream done in 4268.00ms @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:219
+[   12082ms] [LOG] updateThreadItem {id: x57mFCeISw6ifooWABcU9, status: COMPLETED, persistToDB: true} @ webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:596
+[   12088ms] [INFO] Stream completed in 7296.40ms @ webpack-internal:///(app-pages-browser)/../../packages/common/hooks/agent-provider.tsx:270
+[ 1323797ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1324435ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1324455ms] [LOG] [Fast Refresh] done in 659ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1330705ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1331736ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1331755ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:112
+[ 1333480ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1333999ms] [ERROR] Failed to initialize SharedWorker: TypeError: Failed to construct 'URL': Invalid URL
+    at initializeWorker (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:149:37)
+    at eval (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:767:13) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1334021ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1334024ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1334099ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1334233ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://FAQ.txt&size=128:0
+[ 1334272ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://L15040%20-%20Nova%20lei%20de%20seguros.pdf&size=128:0
+[ 1334898ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/icon-192x192.png:0
+[ 1334911ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/icon-192x192.png (Download error or resource isn't a valid image) @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1342831ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1343389ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1343415ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:112
+[ 1343882ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1344301ms] [ERROR] Failed to initialize SharedWorker: TypeError: Failed to construct 'URL': Invalid URL
+    at initializeWorker (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:149:37)
+    at eval (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:767:13) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1344326ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1344328ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1344348ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/icon-192x192.png:0
+[ 1344366ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/icon-192x192.png (Download error or resource isn't a valid image) @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1344387ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1344469ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://L15040%20-%20Nova%20lei%20de%20seguros.pdf&size=128:0
+[ 1344472ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://FAQ.txt&size=128:0
+[ 1359829ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1360502ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/tools-menu.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1360526ms] [LOG] [Fast Refresh] done in 696ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1374743ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1375926ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/tools-menu.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1375970ms] [ERROR] Warning: Cannot update a component (`%s`) while rendering a different component (`%s`). To locate the bad setState() call inside `%s`, follow the stack trace as described in https://reactjs.org/link/setstate-in-render%s HotReload SettingsModal SettingsModal 
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:47:88)
+    at div
+    at _c (webpack-internal:///(app-pages-browser)/../../packages/ui/src/components/flex.tsx:64:11)
+    at div
+    at RootLayout (webpack-internal:///(app-pages-browser)/../../packages/common/components/layout/root.tsx:37:11)
+    at QueryClientProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:27:11)
+    at ReactQueryProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/react-query.tsx:18:11)
+    at Provider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-context/dist/index.mjs:34:15)
+    at TooltipProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-tooltip/dist/index.mjs:58:13)
+    at RootProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/root.tsx:17:11)
+    at body
+    at html
+    at ParentLayout (Server)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at DevRootNotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/dev-root-not-found-boundary.js:33:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:321:11)
+    at Router (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:207:11)
+    at ErrorBoundaryHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:113:9)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at AppRouter (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:577:13)
+    at ServerRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:117:11) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1375975ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at HTMLUnknownElement.callCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20565:14)
+    at Object.invokeGuardedCallbackImpl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20614:16)
+    at invokeGuardedCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20689:29)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26949:7)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24887:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375976ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24887:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375976ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24887:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375976ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at HTMLUnknownElement.callCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20565:14)
+    at Object.invokeGuardedCallbackImpl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20614:16)
+    at invokeGuardedCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20689:29)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26949:7)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24899:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375976ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24899:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375976ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16290:20)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18472:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performSyncWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24899:20)
+    at flushSyncWorkAcrossRoots_impl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7758:13)
+    at flushSyncWorkOnAllRoots (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:7718:3)
+    at flushSync$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24999:7)
+    at Object.scheduleRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:27285:5)
+    at eval (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:265:17)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-refresh/cjs/react-refresh-runtime.development.js:254:26)
+    at applyUpdate (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:139:31)
+    at statusHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/@next/react-refresh-utils/dist/internal/helpers.js:156:13)
+    at setStatus (http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:508:55)
+    at http://localhost:3000/_next/static/chunks/webpack.js?v=1779676537800:678:21
+[ 1375983ms] [ERROR] The above error occurred in the <NotFoundErrorBoundary> component:
+
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:47:88)
+    at div
+    at _c (webpack-internal:///(app-pages-browser)/../../packages/ui/src/components/flex.tsx:64:11)
+    at div
+    at RootLayout (webpack-internal:///(app-pages-browser)/../../packages/common/components/layout/root.tsx:37:11)
+    at QueryClientProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:27:11)
+    at ReactQueryProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/react-query.tsx:18:11)
+    at Provider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-context/dist/index.mjs:34:15)
+    at TooltipProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-tooltip/dist/index.mjs:58:13)
+    at RootProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/root.tsx:17:11)
+    at body
+    at html
+    at ParentLayout (Server)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at DevRootNotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/dev-root-not-found-boundary.js:33:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:321:11)
+    at Router (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:207:11)
+    at ErrorBoundaryHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:113:9)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at AppRouter (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:577:13)
+    at ServerRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:117:11)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1375995ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:114
+[ 1376954ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1377136ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1377790ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at HTMLUnknownElement.callCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20565:14)
+    at Object.invokeGuardedCallbackImpl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20614:16)
+    at invokeGuardedCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20689:29)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26949:7)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24504:74)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377792ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24504:74)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377793ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24504:74)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377797ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at HTMLUnknownElement.callCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20565:14)
+    at Object.invokeGuardedCallbackImpl (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20614:16)
+    at invokeGuardedCallback (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20689:29)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26949:7)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24542:26)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377797ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24542:26)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377798ms] ReferenceError: ModelSettings is not defined
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:64:100)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:11121:18)
+    at mountIndeterminateComponent (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:16869:13)
+    at beginWork$1 (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:18458:16)
+    at beginWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26927:14)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25748:12)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25464:5)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:25419:7)
+    at recoverFromConcurrentError (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24597:20)
+    at performConcurrentWorkOnRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24542:26)
+    at workLoop (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21)
+[ 1377800ms] [ERROR] The above error occurred in the <NotFoundErrorBoundary> component:
+
+    at SettingsModal (webpack-internal:///(app-pages-browser)/../../packages/common/components/settings-modal.tsx:47:88)
+    at div
+    at _c (webpack-internal:///(app-pages-browser)/../../packages/ui/src/components/flex.tsx:64:11)
+    at div
+    at RootLayout (webpack-internal:///(app-pages-browser)/../../packages/common/components/layout/root.tsx:37:11)
+    at QueryClientProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:27:11)
+    at ReactQueryProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/react-query.tsx:18:11)
+    at Provider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-context/dist/index.mjs:34:15)
+    at TooltipProvider (webpack-internal:///(app-pages-browser)/../../node_modules/@radix-ui/react-tooltip/dist/index.mjs:58:13)
+    at RootProvider (webpack-internal:///(app-pages-browser)/../../packages/common/context/root.tsx:17:11)
+    at body
+    at html
+    at ParentLayout (Server)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at DevRootNotFoundBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/dev-root-not-found-boundary.js:33:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:321:11)
+    at Router (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:207:11)
+    at ErrorBoundaryHandler (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:113:9)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at AppRouter (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/app-router.js:577:13)
+    at ServerRoot (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:117:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ReactDevOverlay. @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1377807ms] [ERROR] Failed to initialize SharedWorker: TypeError: Failed to construct 'URL': Invalid URL
+    at initializeWorker (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:149:37)
+    at eval (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:767:13) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1377838ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1380845ms] [WARNING] The resource http://localhost:3000/_next/static/css/app/chat/layout.css?v=1779676570919 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1380845ms] [WARNING] The resource http://localhost:3000/_next/static/css/app/chat/%5BthreadId%5D/page.css?v=1779676570919 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1409902ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1410399ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/tools-menu.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1410429ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:112
+[ 1411242ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1411693ms] [ERROR] Failed to initialize SharedWorker: TypeError: Failed to construct 'URL': Invalid URL
+    at initializeWorker (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:149:37)
+    at eval (webpack-internal:///(app-pages-browser)/../../packages/common/store/chat.store.ts:767:13) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/app-index.js:32
+[ 1411720ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1411723ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1411794ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported) @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1411982ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://L15040%20-%20Nova%20lei%20de%20seguros.pdf&size=128:0
+[ 1411982ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://FAQ.txt&size=128:0
+[ 1412114ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/icon-192x192.png:0
+[ 1412121ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/icon-192x192.png (Download error or resource isn't a valid image) @ http://localhost:3000/chat/16700336-0286-4322-a4a2-78fa08c5b45b:0
+[ 1423192ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1423563ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1423586ms] [LOG] [Fast Refresh] done in 394ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1435030ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1435432ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1435442ms] [LOG] [Fast Refresh] done in 412ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1443403ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1443689ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1443702ms] [LOG] [Fast Refresh] done in 300ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1451596ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1452063ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1452072ms] [LOG] [Fast Refresh] done in 476ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1464544ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1464913ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1464933ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1464948ms] [LOG] [Fast Refresh] done in 14ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1465563ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1465626ms] [LOG] [Fast Refresh] done in 693ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1465739ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1465740ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1475706ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1476597ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1476678ms] [LOG] [Fast Refresh] done in 972ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1476933ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1476934ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1486895ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1487308ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1487351ms] [LOG] [Fast Refresh] done in 457ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1488118ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1488118ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1498558ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1499998ms] [WARNING] ../../packages/common/store/chat.store.ts
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+Import trace for requested module:
+../../packages/common/store/chat.store.ts
+../../packages/common/components/settings-modal.tsx
+../../packages/common/components/index.ts @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[ 1500062ms] [LOG] [Fast Refresh] done in 1505ms @ webpack-internal:///(app-pages-browser)/../../node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1500191ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14
+[ 1500193ms] [WARNING] [Plausible] Ignoring event because website is running locally @ webpack-internal:///(app-pages-browser)/../../node_modules/plausible-tracker/build/module/lib/request.js:14

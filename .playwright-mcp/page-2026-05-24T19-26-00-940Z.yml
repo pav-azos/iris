@@ -1,0 +1,98 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "llmchat.co" [ref=e7] [cursor=pointer]:
+          - /url: /chat
+          - generic [ref=e8]:
+            - img [ref=e9]
+            - paragraph [ref=e14]: llmchat.co
+        - button [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+      - generic [ref=e19]:
+        - button "New Thread" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+          - text: New Thread
+        - button "Search K" [ref=e22] [cursor=pointer]:
+          - img [ref=e23]
+          - text: Search
+          - generic [ref=e26]:
+            - img [ref=e28]
+            - generic [ref=e30]: K
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - text: Pinned
+          - paragraph [ref=e38]: No pinned threads
+        - generic [ref=e39]:
+          - generic [ref=e40]: Today
+          - generic [ref=e41]:
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e43] [cursor=pointer]:
+              - /url: /chat/2f883492-24be-4d4a-8fc7-1d50cd808c17
+              - paragraph [ref=e45]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+            - link "Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?" [ref=e47] [cursor=pointer]:
+              - /url: /chat/afaa539f-010f-4671-8a52-82cd6f35c4cd
+              - paragraph [ref=e49]: Qual o prazo para a seguradora pagar a indenização após aprovação do sinistro, segundo a Lei 15.040/2024?
+      - button "Settings" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - text: Settings
+    - generic [ref=e58]:
+      - generic [ref=e62]:
+        - generic [ref=e64]:
+          - link "Star us on GitHub" [ref=e65] [cursor=pointer]:
+            - /url: https://git.new/llmchat
+          - link "Changelog" [ref=e66] [cursor=pointer]:
+            - /url: https://github.com
+          - link "Feedback" [ref=e67] [cursor=pointer]:
+            - /url: ""
+          - link "Terms" [ref=e68] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e69] [cursor=pointer]:
+            - /url: /privacy
+        - generic [ref=e72]:
+          - generic [ref=e74]:
+            - heading [level=1]
+          - generic [ref=e77]:
+            - generic [ref=e79]:
+              - textbox [ref=e83]:
+                - paragraph [ref=e84]: Ask anything
+              - generic [ref=e85]:
+                - generic [ref=e86]:
+                  - button "Gemini Flash 2.0" [ref=e87] [cursor=pointer]:
+                    - text: Gemini Flash 2.0
+                    - img [ref=e88]
+                  - generic [ref=e90]:
+                    - generic:
+                      - button:
+                        - img
+                    - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                  - generic [ref=e91]:
+                    - generic:
+                      - button:
+                        - img
+                    - generic: "Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄"
+                - button [disabled] [ref=e95]:
+                  - img [ref=e96]
+            - button "Choose File" [ref=e99]
+          - generic [ref=e100]:
+            - button "How to" [ref=e101] [cursor=pointer]:
+              - img [ref=e102]
+              - text: How to
+            - button "Explain Concepts" [ref=e104] [cursor=pointer]:
+              - img [ref=e105]
+              - text: Explain Concepts
+            - button "Creative" [ref=e108] [cursor=pointer]:
+              - img [ref=e109]
+              - text: Creative
+            - button "Advice" [ref=e112] [cursor=pointer]:
+              - img [ref=e113]
+              - text: Advice
+            - button "Analysis" [ref=e116] [cursor=pointer]:
+              - img [ref=e117]
+              - text: Analysis
+      - button [ref=e122] [cursor=pointer]:
+        - img [ref=e123]
+    - region "Notifications (F8)":
+      - list
+  - alert [ref=e125]

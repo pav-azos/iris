@@ -65,7 +65,7 @@ export interface ChunkFileInput {
   authority: Authority;
 }
 
-const QA_FILE_PATTERNS = [/FAQ/i, /flashcard/i, /agente/i];
+const QA_FILE_PATTERNS = [/^FAQ/i, /flashcard/i]; // /agente/i removido — capturava doc de pesquisa
 
 function isQAFile(filePath: string): boolean {
   const name = basename(filePath);
@@ -76,23 +76,14 @@ async function extractPDFPages(
   filePath: string
 ): Promise<Array<{ text: string; page: number }>> {
   // Use legacy build for Bun/Node compatibility (no DOM dependency)
-  const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs' as string);
-  const lib = (pdfjsLib as any).default ?? pdfjsLib;
-  lib.GlobalWorkerOptions.workerSrc = '';
-
-  const data = new Uint8Array(readFileSync(filePath));
-  const doc = await lib.getDocument({ data }).promise;
+  // pdf-parse via caminho interno — evita auto-teste quebrado do index.js (bug v1.1.1)
+  const pdfParse = require('pdf-parse/lib/pdf-parse.js');
+  const buffer = readFileSync(filePath);
+  const data = await pdfParse(buffer);
+  // pdf-parse não separa por página — retorna texto completo como página única
   const pages: Array<{ text: string; page: number }> = [];
-
-  for (let i = 1; i <= doc.numPages; i++) {
-    const pg = await doc.getPage(i);
-    const content = await pg.getTextContent();
-    const text = (content.items as Array<{ str?: string }>)
-      .map(item => item.str ?? '')
-      .join(' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (text) pages.push({ text, page: i });
+  if (data.text?.trim()) {
+    pages.push({ text: data.text.replace(/\s+/g, ' ').trim(), page: 1 });
   }
   return pages;
 }
