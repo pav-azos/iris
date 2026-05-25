@@ -10,3 +10,5 @@ apps/web/tsconfig.tsbuildinfo
 
 # Docs data
 docs/data/
+.playwright-mcp/
+.claude/
