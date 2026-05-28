@@ -1,9 +1,9 @@
-// Clerk auth removed — ÍRIS is open access (academic project for I2A2 InsurMinds RAG course)
 import { cn, Dialog, DialogContent } from '@repo/ui';
 import { IconCircleCheckFilled } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Logo } from './logo';
+
 export const IntroDialog = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,37 +20,33 @@ export const IntroDialog = () => {
     };
 
     const icon = (
-        <IconCircleCheckFilled className="text-muted-foreground/50 mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full" />
+        <IconCircleCheckFilled className="text-brand/60 mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full" />
     );
 
     const points = [
         {
             icon,
-            text: `**Privacy-focused**: Your chat history never leaves your device.`,
+            text: `**Especializado em Seguros**: Fine-tuned no domínio de seguros para respostas precisas e contextualizadas.`,
         },
         {
             icon,
-            text: `**Open source**: Fully transparent and modifiable. Easily deploy it yourself.`,
+            text: `**RAG Avançado**: Recupera contexto de documentos de seguros para embasar cada resposta com fontes confiáveis.`,
         },
         {
             icon,
-            text: `**Research-friendly**: Leverage Web Search, Pro Search, and Deep Research features.`,
+            text: `**Modelo Fine-tuned**: ÍRIS Mistral 7B treinado especificamente no corpus InsurMinds do curso I2A2.`,
         },
         {
             icon,
-            text: `**Comprehensive model support**: Compatible with all mainstream model providers.`,
+            text: `**Privacidade Local**: O modelo roda localmente via Ollama — suas perguntas não saem do seu ambiente.`,
         },
         {
             icon,
-            text: `**BYOK (Bring Your Own Key)**: Use your own API key for unlimited chat.`,
+            text: `**Provedor Externo Opcional**: Conecte OpenAI ou Anthropic como alternativa ao modelo local.`,
         },
         {
             icon,
-            text: `**MCP Compatibility**: Connect with any MCP servers/tools (coming soon).`,
-        },
-        {
-            icon,
-            text: `**Usage Tracking**: Monitor your model usage without paying (coming soon).`,
+            text: `**Projeto Acadêmico**: Desenvolvido no curso RAG da I2A2 — InsurMinds.`,
         },
     ];
 
@@ -66,28 +62,31 @@ export const IntroDialog = () => {
             }}
         >
             <DialogContent
-                ariaTitle="Introduction"
+                ariaTitle="Bem-vindo ao ÍRIS"
                 className="flex max-w-[420px] flex-col gap-0 overflow-hidden p-0"
             >
                 <div className="flex flex-col gap-8 p-5">
                     <div className="flex flex-col gap-2">
                         <div
                             className={cn(
-                                'flex h-8 w-full cursor-pointer items-center justify-start gap-1.5 '
+                                'flex h-8 w-full cursor-pointer items-center justify-start gap-1.5'
                             )}
                         >
                             <Logo className="text-brand size-5" />
                             <p className="font-clash text-foreground text-lg font-bold tracking-wide">
-                                llmchat.co
+                                ÍRIS
                             </p>
                         </div>
                         <p className="text-base font-semibold">
-                            Private, Open-Source, and Built for You
+                            Assistente de IA para Seguros
+                        </p>
+                        <p className="text-muted-foreground text-sm">
+                            Powered by RAG + Mistral 7B fine-tuned — I2A2 InsurMinds
                         </p>
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <h3 className="text-sm font-semibold">Key benefits:</h3>
+                        <h3 className="text-sm font-semibold">O que o ÍRIS oferece:</h3>
 
                         <div className="flex flex-col items-start gap-1.5">
                             {points.map((point, index) => (
@@ -102,7 +101,7 @@ export const IntroDialog = () => {
                                                 </p>
                                             ),
                                             strong: ({ children }) => (
-                                                <span className="text-sm font-semibold">
+                                                <span className="text-foreground text-sm font-semibold">
                                                     {children}
                                                 </span>
                                             ),

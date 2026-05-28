@@ -6,8 +6,7 @@ interface DisabledFeatureProps {
     reason?: string;
 }
 
-const DEFAULT_REASON =
-    'Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄';
+const DEFAULT_REASON = 'Funcionalidade em desenvolvimento para versão futura do ÍRIS.';
 
 export function DisabledFeature({
     children,

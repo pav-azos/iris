@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    transpilePackages: ['next-mdx-remote'],
+    transpilePackages: ['next-mdx-remote', '@repo/rag', '@repo/ai'],
     images: {
         remotePatterns: [{ hostname: 'www.google.com' }],
     },

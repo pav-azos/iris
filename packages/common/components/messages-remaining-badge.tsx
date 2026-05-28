@@ -1,5 +1,4 @@
-// Disabled for ÍRIS — no credits system in this version (academic project for I2A2 InsurMinds RAG course)
-// Celso (I2A2): o I2A2 ainda vai ensinar a gente a fazer isso direito 😄
+// Credits system not active in ÍRIS — academic project for I2A2 InsurMinds RAG course
 export function MessagesRemainingBadge() {
     return null;
 }

@@ -4,45 +4,45 @@ import {
     IconBook,
     IconBulb,
     IconChartBar,
-    IconPencil,
-    IconQuestionMark,
+    IconFileText,
+    IconShield,
 } from '@tabler/icons-react';
 import { Editor } from '@tiptap/react';
 
 export const examplePrompts = {
-    howTo: [
-        'How to plan a sustainable vegetable garden for small spaces?',
-        'How to prepare for your first international travel experience?',
-        'How to set up a personal budget that actually works?',
-        'How to improve your public speaking skills for professional settings?',
+    coberturas: [
+        'O que é cobertura de responsabilidade civil em seguro de automóvel?',
+        'Qual a diferença entre cobertura básica e cobertura compreensiva?',
+        'O seguro residencial cobre danos causados por enchente?',
+        'Quais são as coberturas obrigatórias em um seguro de vida?',
     ],
 
-    explainConcepts: [
-        'Explain how blockchain technology works in simple terms.',
-        'What is quantum computing and how does it differ from traditional computing?',
-        'Explain the concept of emotional intelligence and its importance.',
-        'How does carbon capture technology work to combat climate change?',
+    sinistros: [
+        'Como funciona o processo de abertura de sinistro?',
+        'Quais documentos são necessários para acionar um sinistro de automóvel?',
+        'Em quanto tempo a seguradora deve responder a um sinistro?',
+        'O que é franquia e como ela impacta o valor do sinistro?',
     ],
 
-    creative: [
-        "Write a short story about a chance encounter that changes someone's life.",
-        'Create a recipe for a fusion dish combining Italian and Japanese cuisines.',
-        'Design a fictional sustainable city of the future.',
-        'Develop a character profile for the protagonist of a science fiction novel.',
+    conceitos: [
+        'Explique o conceito de prêmio de seguro e como ele é calculado.',
+        'Qual a diferença entre seguro de vida individual e coletivo?',
+        'O que é resseguro e qual sua função no mercado segurador?',
+        'Como funciona a portabilidade de planos de previdência privada?',
     ],
 
-    advice: [
-        "What's the best approach to negotiate a salary increase?",
-        'How should I prepare for a marathon as a beginner runner?',
-        'What strategies can help manage work-life balance when working remotely?',
-        'What should I consider when adopting a pet for the first time?',
+    regulacao: [
+        'Qual o papel da SUSEP na regulação do mercado de seguros no Brasil?',
+        'O que diz o Código de Defesa do Consumidor sobre seguros?',
+        'Quais são os direitos do segurado em caso de recusa de sinistro?',
+        'Como funciona o processo de reclamação na SUSEP?',
     ],
 
-    analysis: [
-        'Analyze the potential impact of artificial intelligence on healthcare.',
-        'Compare different approaches to addressing climate change.',
-        'Examine the pros and cons of various renewable energy sources.',
-        'Analyze how social media has transformed communication in the past decade.',
+    analise: [
+        'Compare seguro de automóvel com cobertura de terceiros vs. cobertura total.',
+        'Analise os fatores que influenciam o custo de um seguro saúde empresarial.',
+        'Quais tendências de InsurTech estão transformando o mercado de seguros?',
+        'Como a inteligência artificial está sendo usada para prevenção de fraudes em seguros?',
     ],
 };
 
@@ -59,13 +59,12 @@ export const getRandomPrompt = (category?: keyof typeof examplePrompts) => {
     return prompts[Math.floor(Math.random() * prompts.length)];
 };
 
-// Map of category to icon component
 const categoryIcons = {
-    howTo: { name: 'How to', icon: IconQuestionMark, color: '!text-yellow-700' },
-    explainConcepts: { name: 'Explain Concepts', icon: IconBulb, color: '!text-blue-700' },
-    creative: { name: 'Creative', icon: IconPencil, color: '!text-green-700' },
-    advice: { name: 'Advice', icon: IconBook, color: '!text-purple-700' },
-    analysis: { name: 'Analysis', icon: IconChartBar, color: '!text-red-700' },
+    coberturas: { name: 'Coberturas', icon: IconShield, color: '!text-brand' },
+    sinistros: { name: 'Sinistros', icon: IconFileText, color: '!text-blue-600' },
+    conceitos: { name: 'Conceitos', icon: IconBulb, color: '!text-yellow-600' },
+    regulacao: { name: 'Regulação', icon: IconBook, color: '!text-purple-600' },
+    analise: { name: 'Análise', icon: IconChartBar, color: '!text-green-600' },
 };
 
 export const ExamplePrompts = () => {

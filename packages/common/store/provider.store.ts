@@ -5,7 +5,7 @@ import { persist } from 'zustand/middleware';
 export type Provider = 'ollama' | 'openai' | 'anthropic';
 
 export const OLLAMA_MODELS = [
-    { id: 'iris-mistral-7b', label: 'ÍRIS Mistral 7B (fine-tuned)', isDefault: true },
+    { id: 'iris-mistral', label: 'ÍRIS Mistral 7B (fine-tuned)', isDefault: true },
     { id: 'mistral:7b-instruct', label: 'Mistral 7B Instruct (base)', isDefault: false },
 ] as const;
 
@@ -28,7 +28,7 @@ export const useProviderStore = create<ProviderState>()(
     persist(
         set => ({
             selectedProvider: 'ollama',
-            selectedModel: 'iris-mistral-7b',
+            selectedModel: 'iris-mistral',
             ollamaBaseUrl: 'http://localhost:11434',
             setSelectedProvider: (provider) => set({ selectedProvider: provider }),
             setSelectedModel: (model) => set({ selectedModel: model }),
