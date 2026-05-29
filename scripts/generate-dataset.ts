@@ -8,7 +8,7 @@
  * Uso: bun run generate-dataset
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "fs";
 import { join } from "path";
 import { IRIS_SYSTEM_PROMPT } from "../packages/rag/prompt-builder";
 
@@ -59,6 +59,24 @@ export function parseQAPairs(text: string): QAPair[] {
 }
 
 // ---------------------------------------------------------------------------
+// Parser: Extract Q&A pairs from simple format
+// Pattern: "N. **Question?** Answer text."
+// ---------------------------------------------------------------------------
+const SIMPLE_QA_PATTERN = /^\d+\.\s+\*\*(.+?)\*\*\s+(.+)$/;
+
+export function parseSimpleQA(text: string): QAPair[] {
+  const pairs: QAPair[] = [];
+  for (const line of text.split("\n")) {
+    const m = line.trim().match(SIMPLE_QA_PATTERN);
+    if (!m) continue;
+    const question = m[1].replace(/\*+/g, "").trim();
+    const answer = m[2].replace(/\*+/g, "").trim();
+    if (question && answer && answer.length > 5) pairs.push({ question, answer });
+  }
+  return pairs;
+}
+
+// ---------------------------------------------------------------------------
 // Format: Convert Q&A pair to MLX training entry
 // ---------------------------------------------------------------------------
 export function formatMLXEntry(question: string, answer: string): string {
@@ -95,15 +113,30 @@ function main() {
   const allPairs: QAPair[] = [];
 
   // Source files
-  const sources = [
+  const DATA_RAW = join(ROOT, "data");
+
+  const staticSources = [
     join(ROOT, "docs", "Agente FAQ Lei Geral Seguros.txt"),
     join(OUT_DIR, "FAQ.txt"),
   ];
 
+  const webQASources = (() => {
+    try {
+      return readdirSync(DATA_RAW)
+        .filter((f) => f.startsWith("web-qa-") && f.endsWith(".md"))
+        .map((f) => join(DATA_RAW, f));
+    } catch {
+      return [];
+    }
+  })();
+
+  const sources = [...staticSources, ...webQASources];
+
   for (const src of sources) {
     try {
       const text = readFileSync(src, "utf-8");
-      const pairs = parseQAPairs(text);
+      let pairs = parseQAPairs(text);
+      if (pairs.length === 0) pairs = parseSimpleQA(text);
       console.log(`✓ ${src.split("/").pop()}: ${pairs.length} pares`);
       allPairs.push(...pairs);
     } catch {

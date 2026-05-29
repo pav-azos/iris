@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'bun:test';
-import { parseQAPairs, formatMLXEntry } from '../generate-dataset';
+import { parseQAPairs, parseSimpleQA, formatMLXEntry } from '../generate-dataset';
 
 describe('parseQAPairs', () => {
   const sample = `**1. Qual é o prazo para entrega de documentos?**
@@ -19,6 +19,22 @@ describe('parseQAPairs', () => {
 
   it('answer contains the answer text', () => {
     expect(parseQAPairs(sample)[0].answer).toContain('5 dias úteis');
+  });
+});
+
+describe("parseSimpleQA", () => {
+  it("parses N. **Q** A format", () => {
+    const text = `1. **O que é seguro?** É um contrato de risco.\n\n2. **Qual o prazo?** 30 dias.`;
+    const pairs = parseSimpleQA(text);
+    expect(pairs).toHaveLength(2);
+    expect(pairs[0].question).toBe("O que é seguro?");
+    expect(pairs[0].answer).toBe("É um contrato de risco.");
+    expect(pairs[1].question).toBe("Qual o prazo?");
+  });
+
+  it("returns empty for unmatched text", () => {
+    const pairs = parseSimpleQA("Not a Q&A format at all");
+    expect(pairs).toHaveLength(0);
   });
 });
 
