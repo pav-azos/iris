@@ -11,15 +11,16 @@ import { z } from 'zod';
 
 const DATAJUD_BASE = 'https://api-publica.datajud.cnj.jus.br';
 
-// Chave pública oficial do CNJ DataJud
-// Fonte: https://datajud-wiki.cnj.jus.br/api-publica/acesso/
+// Public key from https://datajud-wiki.cnj.jus.br/api-publica/acesso/
+// Override with DATAJUD_API_KEY env var if needed
 const DEFAULT_API_KEY =
+  process.env.DATAJUD_API_KEY ??
   'cDZHYzlZa0JadVREZDJCendFbzVlQTU2UmE6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==';
 
 export interface ProcessoHit {
   numero: string | null;
   dataAjuizamento: string | null;
-  assunto: string;
+  assunto: string | null;
   orgao: string | null;
   tribunal: string;
 }
@@ -97,7 +98,9 @@ export async function searchDatajud(
     return {
       numero: db?.numero ?? null,
       dataAjuizamento: db?.dataAjuizamento ?? null,
-      assunto: (db?.assunto ?? []).map((a) => a.descricao).join(', '),
+      assunto: (db?.assunto ?? []).length > 0
+        ? (db?.assunto ?? []).map((a) => a.descricao).join(', ')
+        : null,
       orgao: db?.orgaoJulgador?.nome ?? null,
       tribunal,
     };
@@ -158,24 +161,27 @@ export const buscarMultiplosTribunaisTool = tool({
     limite_por_tribunal: z.number().min(1).max(10).default(5),
   }),
   execute: async ({ termos, tribunais, limite_por_tribunal }) => {
-    const results = await Promise.allSettled(
-      tribunais.map((t) => searchDatajud(t as Tribunal, termos, limite_por_tribunal))
-    );
-
-    return tribunais.map((tribunal, i) => {
-      const result = results[i];
-      if (result.status === 'rejected') {
+    try {
+      const results = await Promise.allSettled(
+        tribunais.map((t) => searchDatajud(t as Tribunal, termos, limite_por_tribunal))
+      );
+      return tribunais.map((tribunal, i) => {
+        const result = results[i];
+        if (result.status === 'rejected') {
+          return {
+            tribunal: tribunal.toUpperCase(),
+            erro: result.reason instanceof Error ? result.reason.message : String(result.reason),
+          };
+        }
         return {
           tribunal: tribunal.toUpperCase(),
-          erro: result.reason instanceof Error ? result.reason.message : String(result.reason),
+          encontrados: result.value.length,
+          processos: result.value,
         };
-      }
-      return {
-        tribunal: tribunal.toUpperCase(),
-        encontrados: result.value.length,
-        processos: result.value,
-      };
-    });
+      });
+    } catch (err) {
+      return { erro: err instanceof Error ? err.message : String(err) };
+    }
   },
 });
 
