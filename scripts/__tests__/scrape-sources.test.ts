@@ -8,8 +8,8 @@ describe('htmlToText', () => {
   });
 
   it('decodes HTML entities', () => {
-    const result = htmlToText('Lei n&deg; 15.040/2024');
-    expect(result.length).toBeGreaterThan(0);
+    expect(htmlToText('Lei n&deg; 15.040/2024')).toContain('º');
+    expect(htmlToText('A&ccedil;&atilde;o regulat&oacute;ria vigente')).toContain('ção');
   });
 
   it('collapses excess whitespace', () => {

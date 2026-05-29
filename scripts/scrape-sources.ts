@@ -14,8 +14,6 @@ const ROOT = join(import.meta.dir, '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
 const DRY_RUN = process.argv.includes('--dry-run');
 
-mkdirSync(RAW_DIR, { recursive: true });
-
 export interface Source {
   slug: string;
   url: string;
@@ -125,6 +123,31 @@ export function htmlToText(html: string): string {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#\d+;/g, '')
+    .replace(/&deg;/gi, 'º')
+    .replace(/&copy;/gi, '©')
+    .replace(/&reg;/gi, '®')
+    .replace(/&trade;/gi, '™')
+    .replace(/&sect;/gi, '§')
+    .replace(/&para;/gi, '¶')
+    .replace(/&middot;/gi, '·')
+    .replace(/&laquo;/gi, '«')
+    .replace(/&raquo;/gi, '»')
+    .replace(/&agrave;/gi, 'à').replace(/&Agrave;/g, 'À')
+    .replace(/&aacute;/gi, 'á').replace(/&Aacute;/g, 'Á')
+    .replace(/&acirc;/gi, 'â').replace(/&Acirc;/g, 'Â')
+    .replace(/&atilde;/gi, 'ã').replace(/&Atilde;/g, 'Ã')
+    .replace(/&eacute;/gi, 'é').replace(/&Eacute;/g, 'É')
+    .replace(/&ecirc;/gi, 'ê').replace(/&Ecirc;/g, 'Ê')
+    .replace(/&iacute;/gi, 'í').replace(/&Iacute;/g, 'Í')
+    .replace(/&oacute;/gi, 'ó').replace(/&Oacute;/g, 'Ó')
+    .replace(/&ocirc;/gi, 'ô').replace(/&Ocirc;/g, 'Ô')
+    .replace(/&otilde;/gi, 'õ').replace(/&Otilde;/g, 'Õ')
+    .replace(/&uacute;/gi, 'ú').replace(/&Uacute;/g, 'Ú')
+    .replace(/&ccedil;/gi, 'ç').replace(/&Ccedil;/g, 'Ç')
+    .replace(/&ndash;/g, '–')
+    .replace(/&mdash;/g, '—')
+    .replace(/&lsquo;/g, '‘').replace(/&rsquo;/g, '’')
+    .replace(/&ldquo;/g, '“').replace(/&rdquo;/g, '”')
     .replace(/&[a-z]+;/gi, '')
     .replace(/[ \t]{2,}/g, ' ')
     .replace(/\n{3,}/g, '\n\n')
@@ -170,12 +193,13 @@ async function fetchSource(source: Source): Promise<string | null> {
     const html = await res.text();
     return htmlToText(html);
   } catch (err) {
-    console.warn(`  ✗ Erro ao buscar ${source.url}: ${(err as Error).message}`);
+    console.warn(`  ✗ Erro ao buscar ${source.url}: ${err instanceof Error ? err.message : String(err)}`);
     return null;
   }
 }
 
 async function main() {
+  mkdirSync(RAW_DIR, { recursive: true });
   console.log(`▶ Buscando ${SOURCES.length} fontes...\n`);
 
   let ok = 0;
