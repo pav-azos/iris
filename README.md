@@ -10,32 +10,35 @@
   </p>
 
 <p>
-  <a href="https://github.com/PAVincius/iris/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/PAVincius/iris" alt="contributors" />
+  <a href="https://github.com/pav-azos/iris/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/pav-azos/iris" alt="contributors" />
   </a>
-  <a href="https://github.com/PAVincius/iris/commits/main">
-    <img src="https://img.shields.io/github/last-commit/PAVincius/iris" alt="last commit" />
+  <a href="https://github.com/pav-azos/iris/commits/main">
+    <img src="https://img.shields.io/github/last-commit/pav-azos/iris" alt="last commit" />
   </a>
-  <a href="https://github.com/PAVincius/iris/network/members">
-    <img src="https://img.shields.io/github/forks/PAVincius/iris" alt="forks" />
+  <a href="https://github.com/pav-azos/iris/network/members">
+    <img src="https://img.shields.io/github/forks/pav-azos/iris" alt="forks" />
   </a>
-  <a href="https://github.com/PAVincius/iris/stargazers">
-    <img src="https://img.shields.io/github/stars/PAVincius/iris" alt="stars" />
+  <a href="https://github.com/pav-azos/iris/stargazers">
+    <img src="https://img.shields.io/github/stars/pav-azos/iris" alt="stars" />
   </a>
-  <a href="https://github.com/PAVincius/iris/issues/">
-    <img src="https://img.shields.io/github/issues/PAVincius/iris" alt="open issues" />
+  <a href="https://github.com/pav-azos/iris/issues/">
+    <img src="https://img.shields.io/github/issues/pav-azos/iris" alt="open issues" />
   </a>
-  <a href="https://github.com/PAVincius/iris/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/PAVincius/iris.svg" alt="license" />
+  <a href="https://github.com/pav-azos/iris/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/pav-azos/iris.svg" alt="license" />
+  </a>
+  <a href="https://github.com/trendy-design/llmchat">
+    <img src="https://img.shields.io/badge/forked%20from-llmchat.co-7B4FCC?style=flat" alt="forked from llmchat" />
   </a>
 </p>
 
 <h4>
   <a href="https://ollama.com/karudesune/iris-mistral-7b-instruct">Modelo no Ollama</a>
   <span> · </span>
-  <a href="https://github.com/PAVincius/iris/issues/">Reportar Bug</a>
+  <a href="https://github.com/pav-azos/iris/issues/">Reportar Bug</a>
   <span> · </span>
-  <a href="https://github.com/PAVincius/iris/issues/">Sugerir Feature</a>
+  <a href="https://github.com/pav-azos/iris/issues/">Sugerir Feature</a>
 </h4>
 
 </div>
@@ -197,7 +200,7 @@ JINA_API_KEY=...
 ### Instalação
 
 ```bash
-git clone https://github.com/PAVincius/iris.git
+git clone https://github.com/pav-azos/iris.git
 cd iris
 bun install
 ```
@@ -480,7 +483,7 @@ Distribuído sob licença MIT. Veja [LICENSE](LICENSE) para mais informações.
 | Vinícius Prates Araújo | vinicius.pratesaraujo@gmail.com |
 | Nicholas Duque Guimarães | nicholasduque79@gmail.com |
 
-Repositório: [https://github.com/PAVincius/iris](https://github.com/PAVincius/iris)
+Repositório: [https://github.com/pav-azos/iris](https://github.com/pav-azos/iris)
 
 ---
 
