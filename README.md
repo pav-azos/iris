@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/images/iris-icon.png" alt="ÍRIS logo" width="140" height="auto" />
+  <img src="public/images/iris-icon.jpg" alt="ÍRIS logo" width="140" height="auto" />
 
   <h1>ÍRIS</h1>
 
@@ -70,9 +70,9 @@
 ## Sobre o Projeto
 
 <div align="center">
-  <img src="public/images/inicio.png" alt="Tela inicial" width="48%" />
+  <img src="public/images/inicio.jpg" alt="Tela inicial" width="48%" />
   &nbsp;
-  <img src="public/images/uso.png" alt="Uso do assistente" width="48%" />
+  <img src="public/images/uso.jpg" alt="Uso do assistente" width="48%" />
 </div>
 
 <br/>
