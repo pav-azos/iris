@@ -483,6 +483,7 @@ Distribuído sob licença MIT. Veja [LICENSE](LICENSE) para mais informações.
 | Jonathas Campos Cordeiro | jonathascampos@id.uff.br |
 | Adriana da Silva de Souza | drisaas07@gmail.com |
 | Vinícius Prates Araújo | vinicius.pratesaraujo@gmail.com |
+| Nicholas Duque Guimarães | nicholasduque79@gmail.com |
 
 Repositório: [https://github.com/PAVincius/iris](https://github.com/PAVincius/iris)
 
