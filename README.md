@@ -139,7 +139,6 @@ PDFs + Sites regulatórios
     <li><a href="https://turbo.build/">Turborepo</a></li>
     <li><a href="https://www.docker.com/">Docker</a></li>
     <li><a href="https://www.postgresql.org/">PostgreSQL 16</a></li>
-    <li><a href="https://clerk.com/">Clerk</a> — autenticação</li>
   </ul>
 </details>
 
@@ -179,10 +178,6 @@ OLLAMA_EMBED_MODEL=bge-m3
 
 # Corpus RAG
 CORPUS_PATH=apps/web/data/corpus.json
-
-# Autenticação
-CLERK_SECRET_KEY=sk_...
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 
 # APIs (pipeline de dataset)
 ANTHROPIC_API_KEY=sk-ant-...
